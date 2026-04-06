@@ -124,21 +124,55 @@ Explicitly excluded. Documented to prevent scope creep.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| AUTH-01 – AUTH-05 | Phase 1 | Pending |
-| WAL-01 – WAL-05 | Phase 1 | Pending |
-| PAIR-01 – PAIR-03 | Phase 1 | Pending |
-| BOOK-01 – BOOK-05 | Phase 2 | Pending |
-| MKT-01 – MKT-05 | Phase 1 | Pending |
-| LMT-01 – LMT-06 | Phase 1 | Pending |
-| HIST-01 – HIST-03 | Phase 1 | Pending |
-| PORT-01 – PORT-04 | Phase 4 | Pending |
-| UI-01 – UI-07 | Phase 1 (foundation) + Phase 3 | Pending |
+| AUTH-01 | Phase 1 | Pending |
+| AUTH-02 | Phase 1 | Pending |
+| AUTH-03 | Phase 1 | Pending |
+| AUTH-04 | Phase 1 | Pending |
+| AUTH-05 | Phase 1 | Pending |
+| WAL-01 | Phase 1 | Pending |
+| WAL-02 | Phase 1 | Pending |
+| WAL-03 | Phase 1 | Pending |
+| WAL-04 | Phase 1 | Pending |
+| WAL-05 | Phase 1 | Pending |
+| PAIR-01 | Phase 1 | Pending |
+| PAIR-02 | Phase 1 | Pending |
+| PAIR-03 | Phase 1 | Pending |
+| MKT-01 | Phase 1 | Pending |
+| MKT-02 | Phase 1 | Pending |
+| MKT-03 | Phase 1 | Pending |
+| MKT-04 | Phase 1 | Pending |
+| MKT-05 | Phase 1 | Pending |
+| LMT-01 | Phase 1 | Pending |
+| LMT-02 | Phase 1 | Pending |
+| LMT-03 | Phase 1 | Pending |
+| LMT-04 | Phase 1 | Pending |
+| LMT-05 | Phase 1 | Pending |
+| LMT-06 | Phase 1 | Pending |
+| HIST-01 | Phase 1 | Pending |
+| HIST-02 | Phase 1 | Pending |
+| HIST-03 | Phase 1 | Pending |
+| UI-01 | Phase 1 | Pending |
+| UI-02 | Phase 1 | Pending |
+| UI-03 | Phase 1 | Pending |
+| UI-04 | Phase 1 | Pending |
+| UI-06 | Phase 1 | Pending |
+| BOOK-01 | Phase 2 | Pending |
+| BOOK-02 | Phase 2 | Pending |
+| BOOK-03 | Phase 2 | Pending |
+| BOOK-04 | Phase 2 | Pending |
+| BOOK-05 | Phase 2 | Pending |
+| UI-05 | Phase 2 | Pending |
+| PORT-01 | Phase 4 | Pending |
+| PORT-02 | Phase 4 | Pending |
+| PORT-03 | Phase 4 | Pending |
+| PORT-04 | Phase 4 | Pending |
+| UI-07 | Phase 5 | Pending |
 
 **Coverage:**
 - v1 requirements: 29 total
 - Mapped to phases: 29
-- Unmapped: 0 ✓
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-04-06*
-*Last updated: 2026-04-06 after research synthesis*
+*Last updated: 2026-04-06 after roadmap creation*
