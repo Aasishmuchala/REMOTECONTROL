@@ -142,7 +142,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Core Engine | 0/6 | Not started | - |
+| 1. Core Engine | 0/1 | Planned    |  |
 | 2. Market Data & Real-Time | 0/TBD | Not started | - |
 | 3. Trading UI End-to-End | 0/TBD | Not started | - |
 | 4. Portfolio & Analytics | 0/TBD | Not started | - |

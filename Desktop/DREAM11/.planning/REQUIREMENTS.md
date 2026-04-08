@@ -15,8 +15,8 @@
 
 ### Wallet & Credits
 
-- [ ] **WAL-01**: User can view wallet balance for each asset (credits + supported crypto)
-- [ ] **WAL-02**: User can view available balance vs balance locked in open orders
+- [x] **WAL-01**: User can view wallet balance for each asset (credits + supported crypto)
+- [x] **WAL-02**: User can view available balance vs balance locked in open orders
 - [ ] **WAL-03**: User can deposit credits (admin-granted via seed)
 - [ ] **WAL-04**: User cannot spend more credits than available balance
 - [ ] **WAL-05**: All monetary values use decimal.js precision (no floating-point math)
@@ -54,9 +54,9 @@
 
 ### Trade History
 
-- [ ] **HIST-01**: User can view personal trade history (fills they participated in)
-- [ ] **HIST-02**: Trade history shows price, quantity, pair, side, and timestamp
-- [ ] **HIST-03**: Trade history is paginated (50 trades per page)
+- [x] **HIST-01**: User can view personal trade history (fills they participated in)
+- [x] **HIST-02**: Trade history shows price, quantity, pair, side, and timestamp
+- [x] **HIST-03**: Trade history is paginated (50 trades per page)
 
 ### Portfolio
 
@@ -129,8 +129,8 @@ Explicitly excluded. Documented to prevent scope creep.
 | AUTH-03 | Phase 1 | Pending |
 | AUTH-04 | Phase 1 | Pending |
 | AUTH-05 | Phase 1 | Pending |
-| WAL-01 | Phase 1 | Pending |
-| WAL-02 | Phase 1 | Pending |
+| WAL-01 | Phase 1 | Complete |
+| WAL-02 | Phase 1 | Complete |
 | WAL-03 | Phase 1 | Pending |
 | WAL-04 | Phase 1 | Pending |
 | WAL-05 | Phase 1 | Pending |
@@ -148,9 +148,9 @@ Explicitly excluded. Documented to prevent scope creep.
 | LMT-04 | Phase 1 | Pending |
 | LMT-05 | Phase 1 | Pending |
 | LMT-06 | Phase 1 | Pending |
-| HIST-01 | Phase 1 | Pending |
-| HIST-02 | Phase 1 | Pending |
-| HIST-03 | Phase 1 | Pending |
+| HIST-01 | Phase 1 | Complete |
+| HIST-02 | Phase 1 | Complete |
+| HIST-03 | Phase 1 | Complete |
 | UI-01 | Phase 1 | Pending |
 | UI-02 | Phase 1 | Pending |
 | UI-03 | Phase 1 | Pending |
