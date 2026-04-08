@@ -70,7 +70,7 @@
 - [ ] **UI-01**: App uses dark glassmorphism design (glass surfaces, subtle glows)
 - [ ] **UI-02**: App uses electric cyan (#00d4ff) as primary accent color
 - [ ] **UI-03**: Price changes animate smoothly (Framer Motion number morphing)
-- [ ] **UI-04**: Order form shows slippage estimate before confirmation
+- [x] **UI-04**: Order form shows slippage estimate before confirmation
 - [x] **UI-05**: Order book rows animate on insert/update
 - [ ] **UI-06**: Buttons have hover glow and press feedback micro-interactions
 - [ ] **UI-07**: App is mobile-responsive (stacked layout on small screens)
@@ -154,7 +154,7 @@ Explicitly excluded. Documented to prevent scope creep.
 | UI-01 | Phase 1 | Pending |
 | UI-02 | Phase 1 | Pending |
 | UI-03 | Phase 1 | Pending |
-| UI-04 | Phase 1 | Pending |
+| UI-04 | Phase 1 | Complete |
 | UI-06 | Phase 1 | Pending |
 | BOOK-01 | Phase 2 | Complete |
 | BOOK-02 | Phase 2 | Complete |
