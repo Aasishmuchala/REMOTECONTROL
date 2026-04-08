@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import TradingPairSelector from '@/components/TradingPairSelector'
 import OrderForm from '@/components/OrderForm'
 import PriceTicker from '@/components/PriceTicker'
@@ -17,11 +17,24 @@ const DEFAULT_PAIR = 'BTC-USDC'
 export default function TradePage() {
   const [selectedPairId, setSelectedPairId] = useState(DEFAULT_PAIR)
   const [wallet, setWallet] = useState<{ availableBalance: string } | null>(null)
+  const [refreshKey, setRefreshKey] = useState(0)
 
   // Real-time Socket.IO hooks
   const { bids, asks, bidsDiff, asksDiff } = useOrderBook(selectedPairId)
   const { price } = usePriceFeed(selectedPairId)
   const { trades } = useRecentTrades(selectedPairId)
+
+  const handleOrderPlaced = useCallback(async () => {
+    // Re-fetch wallet balance
+    try {
+      const w = await apiFetch('/api/wallet') as { availableBalance: string }
+      setWallet(w)
+    } catch {
+      // Non-critical
+    }
+    // Bump refreshKey to trigger OpenOrders re-fetch
+    setRefreshKey(k => k + 1)
+  }, [])
 
   // Fetch wallet balance for OrderForm display
   useEffect(() => {
@@ -61,6 +74,9 @@ export default function TradePage() {
           <OrderForm
             pairId={selectedPairId}
             walletBalance={wallet?.availableBalance}
+            bids={bids}
+            asks={asks}
+            onOrderPlaced={handleOrderPlaced}
           />
         </div>
 
@@ -81,7 +97,7 @@ export default function TradePage() {
       </div>
 
       {/* Open orders for selected pair */}
-      <OpenOrders pairId={selectedPairId} />
+      <OpenOrders pairId={selectedPairId} refreshKey={refreshKey} />
     </div>
   )
 }
