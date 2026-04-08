@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* CoinXI Exchange — Dark Glassmorphism */
+  --color-bg: #0a0a0f;
+  --color-surface: #0f0f1a;
+  --color-surface-high: #14141f;
+  --color-surface-elevated: #1a1a2e;
+
+  /* Accent */
+  --color-cyan: #00d4ff;
+  --color-cyan-dim: rgba(0, 212, 255, 0.15);
+  --color-cyan-glow: rgba(0, 212, 255, 0.35);
+
+  /* Status */
+  --color-green: #00ff88;
+  --color-red: #ff4466;
+  --color-green-dim: rgba(0, 255, 136, 0.12);
+  --color-red-dim: rgba(255, 68, 102, 0.12);
+
+  /* Text */
+  --color-text-primary: #f0f0ff;
+  --color-text-secondary: rgba(240, 240, 255, 0.6);
+  --color-text-muted: rgba(240, 240, 255, 0.35);
+
+  /* Glass */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: 16px;
+
+  /* Typography */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-body), system-ui, sans-serif;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display { font-family: var(--font-display), sans-serif; }
+.font-mono    { font-family: var(--font-mono), monospace; }
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+}
+
+.glass-elevated {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 20px var(--color-cyan-glow), 0 0 40px rgba(0, 212, 255, 0.1);
+}
+
+.glow-cyan-sm {
+  box-shadow: 0 0 8px var(--color-cyan-dim);
+}
+
+.text-cyan  { color: var(--color-cyan); }
+.text-green { color: var(--color-green); }
+.text-red   { color: var(--color-red); }
+
+.price-up   { color: var(--color-green); }
+.price-down { color: var(--color-red); }
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.25); }
+
+.border-glass { border-color: var(--glass-border); }
+
+@supports (padding-top: env(safe-area-inset-top)) {
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+::selection {
+  background: var(--color-cyan-dim);
+  color: var(--color-text-primary);
+}
