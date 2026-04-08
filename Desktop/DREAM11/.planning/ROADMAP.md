@@ -87,7 +87,7 @@ Plans:
 
 **Depends on**: Phase 2
 
-**Requirements**: (Integration and UX — trading UI components built in Phase 1, data pipeline from Phase 2)
+**Requirements**: UI-04
 
 **Success Criteria** (what must be TRUE):
 
@@ -97,7 +97,10 @@ Plans:
   4. User sees a confirmation modal before market orders execute, showing estimated fill price, total cost, and a clear accept/cancel choice
   5. User sees live open orders listed in the trading interface with current status (pending/partial filled) and can cancel any pending order directly from the list
 
-**Plans**: TBD
+**Plans**: 1 plan in 1 wave
+
+Plans:
+- [ ] 03-01-PLAN.md — Wire OrderForm slippage from live book, post-order refresh, OpenOrders 5s auto-refresh + tests
 
 ---
 
@@ -144,13 +147,13 @@ Plans:
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Core Engine | 0/6 | Planned    |  |
-| 2. Market Data & Real-Time | 1/4 | In Progress|  |
-| 3. Trading UI End-to-End | 0/TBD | Not started | - |
+| 2. Market Data & Real-Time | 4/4 | Complete |  |
+| 3. Trading UI End-to-End | 0/1 | Planned | - |
 | 4. Portfolio & Analytics | 0/TBD | Not started | - |
 | 5. Polish & Mobile | 0/TBD | Not started | - |
 
@@ -167,7 +170,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | UI Foundation | UI-01, UI-02, UI-03, UI-04, UI-06 | Phase 1 |
 | Order Book | BOOK-01 to BOOK-05 | Phase 2 |
 | Order Book Animations | UI-05 | Phase 2 |
-| Trading UI Connect | (Phase 1 + Phase 2 integration) | Phase 3 |
+| Trading UI Connect | UI-04 (slippage from live data) | Phase 3 |
 | Portfolio | PORT-01 to PORT-04 | Phase 4 |
 | Mobile Responsive | UI-07 | Phase 5 |
 
