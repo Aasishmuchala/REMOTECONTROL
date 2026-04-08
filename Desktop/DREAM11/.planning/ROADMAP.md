@@ -57,7 +57,7 @@ Plans:
 
 ### Phase 2: Market Data & Real-Time
 
-**Goal**: Establish the real-time data pipeline — simulated price generation for BTC/ETH/SOL pairs, in-memory order book with bid/ask aggregation, Socket.IO room-based broadcasting to connected clients.
+**Goal**: Establish the real-time data pipeline — simulated price generation for BTC/ETH/SOL pairs, database-backed order book broadcasting, Socket.IO global broadcasts to connected clients, animated order book UI, and recent trades feed.
 
 **Depends on**: Phase 1
 
@@ -71,7 +71,13 @@ Plans:
   4. Price ticker updates continuously with simulated price movements (BTC/ETH/SOL against credits)
   5. Order book rows animate on insert and update using Framer Motion — new levels slide in, updated levels flash
 
-**Plans**: TBD
+**Plans**: 4 plans in 4 waves
+
+Plans:
+- [ ] 02-01-PLAN.md — RED: Install Socket.IO + type contracts + stub modules + write all failing tests
+- [ ] 02-02-PLAN.md — GREEN Server: Implement price-simulator + order-book-diff + getRecentTrades + server.ts
+- [ ] 02-03-PLAN.md — GREEN Client: Socket client singleton + useOrderBook + usePriceFeed + useRecentTrades hooks
+- [ ] 02-04-PLAN.md — WIRE: OrderBookTable + RecentTrades components + trade page rewire + visual verification
 
 ---
 
@@ -142,8 +148,8 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Core Engine | 0/1 | Planned    |  |
-| 2. Market Data & Real-Time | 0/TBD | Not started | - |
+| 1. Core Engine | 0/6 | Planned    |  |
+| 2. Market Data & Real-Time | 0/4 | Planned | - |
 | 3. Trading UI End-to-End | 0/TBD | Not started | - |
 | 4. Portfolio & Analytics | 0/TBD | Not started | - |
 | 5. Polish & Mobile | 0/TBD | Not started | - |
