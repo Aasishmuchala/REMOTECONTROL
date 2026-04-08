@@ -12,7 +12,7 @@ CoinXI v1.0 delivers a fully functional credits-only crypto-fiat exchange with A
 
 ## Phases
 
-- [ ] **Phase 1: Core Engine** - Financial primitives: auth, wallet ledger, matching engine, decimal math, Prisma schema, order APIs, UI foundation
+- [ ] **Phase 1: Core Engine** - Financial primitives: auth, wallet ledger, matching engine, decimal math, Drizzle/SQLite schema, order APIs, UI foundation
 - [ ] **Phase 2: Market Data & Real-Time** - Simulated price feed, order book state, real-time broadcasts, recent trades
 - [ ] **Phase 3: Trading UI End-to-End** - Connect all trading components, confirmation flows, depth validation UX, slippage display
 - [ ] **Phase 4: Portfolio & Analytics** - Holdings dashboard, unrealized/realized P&L, open orders view, trade history
@@ -22,7 +22,7 @@ CoinXI v1.0 delivers a fully functional credits-only crypto-fiat exchange with A
 
 ### Phase 1: Core Engine
 
-**Goal**: Complete financial infrastructure — user auth, credits wallet with double-entry ledger, price-time priority matching engine for market and limit orders, all with atomic transactions and decimal.js precision throughout.
+**Goal**: Complete financial infrastructure — user auth, credits wallet with double-entry ledger, price-time priority matching engine for market and limit orders, all with atomic transactions and decimal.js precision throughout. Dark glassmorphism UI with electric cyan accent, trading interface, and full exchange navigation.
 
 **Depends on**: Nothing (first phase)
 
@@ -30,7 +30,7 @@ CoinXI v1.0 delivers a fully functional credits-only crypto-fiat exchange with A
 
 **Success Criteria** (what must be TRUE):
 
-  1. User can sign up with email/password, log in, and remain authenticated across browser refreshes
+  1. User can sign up with username/password, log in, and remain authenticated across browser refreshes
   2. User can view wallet balances showing total, available, and locked (in orders) for each asset
   3. User can deposit credits (admin-granted) and those credits immediately appear in their available balance
   4. User cannot place an order costing more than their available balance — the order is rejected with a clear error
@@ -39,11 +39,19 @@ CoinXI v1.0 delivers a fully functional credits-only crypto-fiat exchange with A
   7. Limit orders fill automatically when market price reaches the order price; partial fills are supported
   8. User can cancel a pending limit order and locked funds are returned to available balance within the same operation
   9. All monetary values — prices, quantities, totals, balances — are stored and calculated using decimal.js with no floating-point rounding errors
-  10. Every balance mutation (deposit, order lock, fill, cancel) happens inside an atomic Prisma transaction with row-level locking — no concurrent order can corrupt balances
+  10. Every balance mutation (deposit, order lock, fill, cancel) is handled by the tested lib functions operating on WAL-mode SQLite — no concurrent writes corrupt balances
   11. Order prices are validated: negative, zero, and extreme prices are rejected before processing
   12. App displays dark glassmorphism UI with electric cyan (#00d4ff) accent, smooth price animations, and button micro-interactions
 
-**Plans**: TBD
+**Plans**: 6 plans in 3 waves
+
+Plans:
+- [ ] 01-01-PLAN.md — Backend: getTradeHistory + db DDL + seed + proxy.ts + 7 API routes
+- [ ] 01-02-PLAN.md — UI Foundation: globals.css + GlassCard + Button + Input + ExchangeNav
+- [ ] 01-03-PLAN.md — Trading UI: OrderForm + PriceTicker + TradingPairSelector
+- [ ] 01-04-PLAN.md — Portfolio UI: PortfolioSummary + TradeHistory + OpenOrders
+- [ ] 01-05-PLAN.md — Pages + routing: /trade, /portfolio, /history + remove cricket routes
+- [ ] 01-06-PLAN.md — Auth pages + main layout wire-up
 
 ---
 
@@ -134,7 +142,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Core Engine | 0/TBD | Not started | - |
+| 1. Core Engine | 0/6 | Not started | - |
 | 2. Market Data & Real-Time | 0/TBD | Not started | - |
 | 3. Trading UI End-to-End | 0/TBD | Not started | - |
 | 4. Portfolio & Analytics | 0/TBD | Not started | - |
