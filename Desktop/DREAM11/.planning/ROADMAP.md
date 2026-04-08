@@ -74,7 +74,7 @@ Plans:
 **Plans**: 4 plans in 4 waves
 
 Plans:
-- [ ] 02-01-PLAN.md — RED: Install Socket.IO + type contracts + stub modules + write all failing tests
+- [x] 02-01-PLAN.md — RED: Install Socket.IO + type contracts + stub modules + write all failing tests
 - [ ] 02-02-PLAN.md — GREEN Server: Implement price-simulator + order-book-diff + getRecentTrades + server.ts
 - [ ] 02-03-PLAN.md — GREEN Client: Socket client singleton + useOrderBook + usePriceFeed + useRecentTrades hooks
 - [ ] 02-04-PLAN.md — WIRE: OrderBookTable + RecentTrades components + trade page rewire + visual verification
@@ -149,7 +149,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Core Engine | 0/6 | Planned    |  |
-| 2. Market Data & Real-Time | 0/4 | Planned | - |
+| 2. Market Data & Real-Time | 1/4 | In Progress|  |
 | 3. Trading UI End-to-End | 0/TBD | Not started | - |
 | 4. Portfolio & Analytics | 0/TBD | Not started | - |
 | 5. Polish & Mobile | 0/TBD | Not started | - |

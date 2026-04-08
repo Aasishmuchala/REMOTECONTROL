@@ -29,11 +29,11 @@
 
 ### Order Book
 
-- [ ] **BOOK-01**: User can view live order book for selected trading pair
-- [ ] **BOOK-02**: Order book shows top 20 bid levels (price + quantity)
-- [ ] **BOOK-03**: Order book shows top 20 ask levels (price + quantity)
-- [ ] **BOOK-04**: Order book updates in real-time (WebSocket or polling)
-- [ ] **BOOK-05**: User can view recent trades for selected pair
+- [x] **BOOK-01**: User can view live order book for selected trading pair
+- [x] **BOOK-02**: Order book shows top 20 bid levels (price + quantity)
+- [x] **BOOK-03**: Order book shows top 20 ask levels (price + quantity)
+- [x] **BOOK-04**: Order book updates in real-time (WebSocket or polling)
+- [x] **BOOK-05**: User can view recent trades for selected pair
 
 ### Market Orders
 
@@ -71,7 +71,7 @@
 - [ ] **UI-02**: App uses electric cyan (#00d4ff) as primary accent color
 - [ ] **UI-03**: Price changes animate smoothly (Framer Motion number morphing)
 - [ ] **UI-04**: Order form shows slippage estimate before confirmation
-- [ ] **UI-05**: Order book rows animate on insert/update
+- [x] **UI-05**: Order book rows animate on insert/update
 - [ ] **UI-06**: Buttons have hover glow and press feedback micro-interactions
 - [ ] **UI-07**: App is mobile-responsive (stacked layout on small screens)
 
@@ -156,12 +156,12 @@ Explicitly excluded. Documented to prevent scope creep.
 | UI-03 | Phase 1 | Pending |
 | UI-04 | Phase 1 | Pending |
 | UI-06 | Phase 1 | Pending |
-| BOOK-01 | Phase 2 | Pending |
-| BOOK-02 | Phase 2 | Pending |
-| BOOK-03 | Phase 2 | Pending |
-| BOOK-04 | Phase 2 | Pending |
-| BOOK-05 | Phase 2 | Pending |
-| UI-05 | Phase 2 | Pending |
+| BOOK-01 | Phase 2 | Complete |
+| BOOK-02 | Phase 2 | Complete |
+| BOOK-03 | Phase 2 | Complete |
+| BOOK-04 | Phase 2 | Complete |
+| BOOK-05 | Phase 2 | Complete |
+| UI-05 | Phase 2 | Complete |
 | PORT-01 | Phase 4 | Pending |
 | PORT-02 | Phase 4 | Pending |
 | PORT-03 | Phase 4 | Pending |
