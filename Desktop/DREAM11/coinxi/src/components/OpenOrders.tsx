@@ -20,9 +20,10 @@ interface Order {
 
 interface OpenOrdersProps {
   pairId: string
+  refreshKey?: number
 }
 
-export default function OpenOrders({ pairId }: OpenOrdersProps) {
+export default function OpenOrders({ pairId, refreshKey }: OpenOrdersProps) {
   const [orders, setOrders] = useState<Order[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [cancellingId, setCancellingId] = useState<string | null>(null)
@@ -39,10 +40,17 @@ export default function OpenOrders({ pairId }: OpenOrdersProps) {
     } finally {
       setIsLoading(false)
     }
-  }, [pairId])
+  }, [pairId, refreshKey])
 
   useEffect(() => {
     loadOrders()
+  }, [loadOrders])
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      loadOrders()
+    }, 5000)
+    return () => clearInterval(interval)
   }, [loadOrders])
 
   const handleCancel = async (orderId: string) => {

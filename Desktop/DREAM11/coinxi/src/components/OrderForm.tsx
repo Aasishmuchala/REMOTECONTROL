@@ -7,6 +7,7 @@ import Button from '@/components/Button'
 import Input from '@/components/Input'
 import { apiFetch } from '@/stores/auth'
 import { cn } from '@/lib/utils'
+import type { BookLevel } from '@/types/socket'
 
 interface SlippageEstimate {
   estimatedFillPrice: string
@@ -17,12 +18,15 @@ interface SlippageEstimate {
 interface OrderFormProps {
   pairId: string
   walletBalance?: string
+  bids?: BookLevel[]
+  asks?: BookLevel[]
+  onOrderPlaced?: () => void
 }
 
 type Side = 'buy' | 'sell'
 type OrderType = 'market' | 'limit'
 
-export default function OrderForm({ pairId, walletBalance }: OrderFormProps) {
+export default function OrderForm({ pairId, walletBalance, bids, asks, onOrderPlaced }: OrderFormProps) {
   const [side, setSide] = useState<Side>('buy')
   const [orderType, setOrderType] = useState<OrderType>('limit')
   const [quantity, setQuantity] = useState('')
@@ -47,11 +51,19 @@ export default function OrderForm({ pairId, walletBalance }: OrderFormProps) {
 
   const fetchSlippage = async (): Promise<SlippageEstimate | null> => {
     try {
-      const book = await apiFetch(`/api/market?pairId=${pairId}`) as {
-        asks: Array<{ price: string; quantity: string }>
-        bids: Array<{ price: string; quantity: string }>
+      let orders: Array<{ price: string; quantity: string }>
+
+      // D-01/D-02: Use live props if available, otherwise fall back to REST
+      if (bids && asks) {
+        orders = side === 'buy' ? asks : bids
+      } else {
+        const book = await apiFetch(`/api/market?pairId=${pairId}`) as {
+          asks: Array<{ price: string; quantity: string }>
+          bids: Array<{ price: string; quantity: string }>
+        }
+        orders = side === 'buy' ? book.asks : book.bids
       }
-      const orders = side === 'buy' ? book.asks : book.bids
+
       if (!orders.length) return null
 
       // Walk the book to estimate fill price for quantity
@@ -121,6 +133,7 @@ export default function OrderForm({ pairId, walletBalance }: OrderFormProps) {
       setSuccess(`${side === 'buy' ? 'Buy' : 'Sell'} order placed`)
       setQuantity('')
       setPrice('')
+      onOrderPlaced?.()
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Order failed')
     } finally {
