@@ -3,9 +3,9 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 01-core-engine-04-PLAN.md — PortfolioSummary + TradeHistory + OpenOrders
-last_updated: "2026-04-08T11:51:03.524Z"
-last_activity: "2026-04-08 — Plan 01-01 executed: proxy.ts + 7 API routes + getTradeHistory + exchange DDL + seed"
+stopped_at: Completed 01-05-PLAN.md — /trade, /portfolio, /history pages + root redirect to /trade
+last_updated: "2026-04-08T11:55:47Z"
+last_activity: "2026-04-08 — Plan 01-05 executed: /trade page (TradingPairSelector+OrderForm+order book), /portfolio page (PortfolioSummary+OpenOrders), /history page (TradeHistory), root redirect to /trade, deleted contests+leaderboards routes"
 progress:
   total_phases: 5
   completed_phases: 0
@@ -22,14 +22,14 @@ See: .planning/PROJECT.md (updated 2026-04-06)
 
 **Core value:** A beautifully designed, fully functional crypto exchange that demonstrates world-class product craft — every pixel, every interaction, every flow is polished. Credits-only means zero financial risk while enabling complete exchange functionality.
 
-**Current focus:** Phase 1: Core Engine (Plans 01-01 through 01-04 complete)
+**Current focus:** Phase 1: Core Engine (Plans 01-01 through 01-05 complete)
 
 ## Current Position
 
 Phase: 1 of 5 (Core Engine)
-Plan: 04 complete (01-04-PLAN.md)
+Plan: 05 complete (01-05-PLAN.md)
 Status: In progress
-Last activity: 2026-04-08 — Plan 01-02 executed: globals.css dark glassmorphism + GlassCard, Button, Input, ExchangeNav; Plan 01-04 executed: PortfolioSummary, TradeHistory, OpenOrders
+Last activity: 2026-04-08 — Plan 01-05 executed: /trade, /portfolio, /history pages assembled; root redirected to /trade; cricket routes deleted
 
 Progress: [██░░░░░░░░] 40%
 
@@ -55,6 +55,7 @@ Progress: [██░░░░░░░░] 40%
 *Updated after each plan completion*
 | Phase 01 P02 | 8 | 2 tasks | 5 files |
 | Phase 01-core-engine P04 | 2 | 2 tasks | 3 files |
+| Phase 01-core-engine P05 | 76s | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -73,6 +74,7 @@ Recent decisions affecting current work:
 - [Phase 01]: Used simple cn() join fallback in utils.ts (no clsx/tailwind-merge installed)
 - [Phase 01]: Installed framer-motion v12.38.0 for Button micro-interactions
 - [Phase 01-core-engine]: Used GlassCard and Button imports per plan spec (resolve at assembly in 01-05)
+- [Phase 01-05]: portfolio/page.tsx kept as Server Component — OpenOrders is 'use client' internally and composes correctly within server component
 
 ### Pending Todos
 
@@ -88,6 +90,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-08T11:51:03.519Z
-Stopped at: Completed 01-core-engine-04-PLAN.md — PortfolioSummary + TradeHistory + OpenOrders
+Last session: 2026-04-08T11:55:47Z
+Stopped at: Completed 01-05-PLAN.md — /trade, /portfolio, /history pages + root redirect to /trade
 Resume file: None
