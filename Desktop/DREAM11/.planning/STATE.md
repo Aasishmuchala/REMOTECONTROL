@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 02-01-PLAN.md
-last_updated: "2026-04-08T13:35:26.881Z"
+stopped_at: Completed 02-02-PLAN.md
+last_updated: "2026-04-08T13:39:11.746Z"
 last_activity: "2026-04-08 — Plan 01-05 executed: /trade, /portfolio, /history pages assembled; root redirected to /trade; cricket routes deleted"
 progress:
   total_phases: 5
   completed_phases: 0
   total_plans: 4
-  completed_plans: 1
-  percent: 25
+  completed_plans: 2
+  percent: 50
 ---
 
 # Project State
@@ -57,6 +57,7 @@ Progress: [██░░░░░░░░] 40%
 | Phase 01-core-engine P04 | 2 | 2 tasks | 3 files |
 | Phase 01-core-engine P05 | 76s | 2 tasks | 4 files |
 | Phase 02-market-data-real-time P01 | 3 | 2 tasks | 11 files |
+| Phase 02-market-data-real-time P02 | 3min | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -80,6 +81,8 @@ Recent decisions affecting current work:
 - [Phase 02-01]: Hook tests use dynamic import in beforeEach so test files parse even when hook modules don't exist yet
 - [Phase 02-01]: Integration test uses real Socket.IO Server on port 0 — no fake timers (Pitfall 3 from RESEARCH.md)
 - [Phase 02-01]: environmentMatchGlobs routes .tsx tests to jsdom, .ts tests stay in node environment
+- [Phase 02-market-data-real-time]: server.ts uses httpServer option on next() so Next.js and Socket.IO share port 3000 — no EADDRINUSE risk
+- [Phase 02-market-data-real-time]: safeBook() strips userId from Order[] before socket.io broadcast (T-02-01 mitigated)
 
 ### Pending Todos
 
@@ -95,6 +98,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-08T13:35:26.877Z
-Stopped at: Completed 02-01-PLAN.md
+Last session: 2026-04-08T13:39:11.742Z
+Stopped at: Completed 02-02-PLAN.md
 Resume file: None

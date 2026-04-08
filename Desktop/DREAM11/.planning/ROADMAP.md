@@ -75,7 +75,7 @@ Plans:
 
 Plans:
 - [x] 02-01-PLAN.md — RED: Install Socket.IO + type contracts + stub modules + write all failing tests
-- [ ] 02-02-PLAN.md — GREEN Server: Implement price-simulator + order-book-diff + getRecentTrades + server.ts
+- [x] 02-02-PLAN.md — GREEN Server: Implement price-simulator + order-book-diff + getRecentTrades + server.ts
 - [ ] 02-03-PLAN.md — GREEN Client: Socket client singleton + useOrderBook + usePriceFeed + useRecentTrades hooks
 - [ ] 02-04-PLAN.md — WIRE: OrderBookTable + RecentTrades components + trade page rewire + visual verification
 
