@@ -1,7 +1,8 @@
 import { defineConfig } from 'vitest/config'
+import path from 'path'
 
 export default defineConfig({
-  resolve: { alias: { '@': '/Users/aasish/Desktop/DREAM11/coinxi/src' } },
+  resolve: { alias: { '@': path.resolve(__dirname, 'src') } },
   test: {
     environment: 'node',
     globals: true,

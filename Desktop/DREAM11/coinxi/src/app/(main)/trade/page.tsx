@@ -7,6 +7,7 @@ import PriceTicker from '@/components/PriceTicker'
 import OpenOrders from '@/components/OpenOrders'
 import OrderBookTable from '@/components/OrderBookTable'
 import RecentTrades from '@/components/RecentTrades'
+import DepthChart from '@/components/DepthChart'
 import { useOrderBook } from '@/hooks/useOrderBook'
 import { usePriceFeed } from '@/hooks/usePriceFeed'
 import { useRecentTrades } from '@/hooks/useRecentTrades'
@@ -77,6 +78,9 @@ export default function TradePage() {
             bidsDiff={bidsDiff}
             asksDiff={asksDiff}
           />
+          <div className="mt-3">
+            <DepthChart bids={bids} asks={asks} />
+          </div>
         </div>
 
         {/* Order form — left on desktop, second on mobile (D-01) */}
