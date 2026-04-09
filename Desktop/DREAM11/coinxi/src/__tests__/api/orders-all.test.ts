@@ -37,6 +37,9 @@ describe('GET /api/orders/all', () => {
   let sqlite: ReturnType<typeof createTestDb>['sqlite']
 
   beforeEach(async () => {
+    // Reset module cache so each test gets fresh imports with its own db mock
+    vi.resetModules()
+
     const testDb = createTestDb()
     db = testDb.db
     sqlite = testDb.sqlite
