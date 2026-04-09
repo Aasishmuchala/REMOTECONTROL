@@ -69,8 +69,18 @@ export default function TradePage() {
 
       {/* Main trading layout — 3 columns on large screens */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-        {/* Order form — left col */}
-        <div className="lg:col-span-1">
+        {/* Order book — center on desktop, FIRST on mobile (D-01) */}
+        <div className="lg:order-2">
+          <OrderBookTable
+            bids={bids}
+            asks={asks}
+            bidsDiff={bidsDiff}
+            asksDiff={asksDiff}
+          />
+        </div>
+
+        {/* Order form — left on desktop, second on mobile (D-01) */}
+        <div className="lg:order-1">
           <OrderForm
             pairId={selectedPairId}
             walletBalance={wallet?.availableBalance}
@@ -80,18 +90,8 @@ export default function TradePage() {
           />
         </div>
 
-        {/* Order book — center col */}
-        <div className="lg:col-span-1">
-          <OrderBookTable
-            bids={bids}
-            asks={asks}
-            bidsDiff={bidsDiff}
-            asksDiff={asksDiff}
-          />
-        </div>
-
-        {/* Recent trades — right col */}
-        <div className="lg:col-span-1">
+        {/* Recent trades — right on desktop, third on mobile (D-01) */}
+        <div className="lg:order-3">
           <RecentTrades trades={trades} />
         </div>
       </div>

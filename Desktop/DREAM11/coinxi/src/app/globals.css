@@ -98,3 +98,11 @@ body {
   background: var(--color-cyan-dim);
   color: var(--color-text-primary);
 }
+
+/* D-08: Reusable hover glow — electric cyan */
+.glow-hover {
+  transition: box-shadow 150ms ease;
+}
+.glow-hover:hover {
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.3);
+}
