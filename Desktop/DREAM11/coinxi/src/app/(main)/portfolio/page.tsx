@@ -1,8 +1,5 @@
-import PortfolioSummary from '@/components/PortfolioSummary'
-import OpenOrders from '@/components/OpenOrders'
-
-// Show open orders for all three pairs
-const PAIRS = ['BTC-USDC', 'ETH-USDC', 'SOL-USDC']
+import PortfolioHoldings from '@/components/PortfolioHoldings'
+import PortfolioOrders from '@/components/PortfolioOrders'
 
 export default function PortfolioPage() {
   return (
@@ -11,16 +8,14 @@ export default function PortfolioPage() {
         <h1 className="text-lg font-semibold text-[var(--color-text-primary)] mb-4">
           Portfolio
         </h1>
-        <PortfolioSummary />
+        <PortfolioHoldings />
       </div>
 
-      <div className="space-y-3">
-        <h2 className="text-sm font-semibold text-[var(--color-text-secondary)] uppercase tracking-wide">
-          Open Orders
+      <div>
+        <h2 className="text-sm font-semibold text-[var(--color-text-secondary)] uppercase tracking-wide mb-4">
+          Orders
         </h2>
-        {PAIRS.map((pairId) => (
-          <OpenOrders key={pairId} pairId={pairId} />
-        ))}
+        <PortfolioOrders />
       </div>
     </div>
   )
