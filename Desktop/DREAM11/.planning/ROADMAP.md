@@ -12,8 +12,8 @@ CoinXI v1.0 delivers a fully functional credits-only crypto-fiat exchange with A
 
 ## Phases
 
-- [ ] **Phase 1: Core Engine** - Financial primitives: auth, wallet ledger, matching engine, decimal math, Drizzle/SQLite schema, order APIs, UI foundation
-- [ ] **Phase 2: Market Data & Real-Time** - Simulated price feed, order book state, real-time broadcasts, recent trades
+- [x] **Phase 1: Core Engine** - Financial primitives: auth, wallet ledger, matching engine, decimal math, Drizzle/SQLite schema, order APIs, UI foundation (completed 2026-04-08)
+- [x] **Phase 2: Market Data & Real-Time** - Simulated price feed, order book state, real-time broadcasts, recent trades (completed 2026-04-08)
 - [x] **Phase 3: Trading UI End-to-End** - Connect all trading components, confirmation flows, depth validation UX, slippage display (completed 2026-04-08)
 - [x] **Phase 4: Portfolio & Analytics** - Holdings dashboard, unrealized/realized P&L, open orders view, trade history (completed 2026-04-09)
 - [x] **Phase 5: Polish & Mobile** - Mobile-responsive layout, cinematic animations, micro-interactions, depth chart (completed 2026-04-09)
@@ -160,8 +160,8 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Core Engine | 0/6 | Planned    |  |
-| 2. Market Data & Real-Time | 4/4 | Complete |  |
+| 1. Core Engine | 6/6 | Complete | 2026-04-08 |
+| 2. Market Data & Real-Time | 4/4 | Complete | 2026-04-08 |
 | 3. Trading UI End-to-End | 1/1 | Complete   | 2026-04-08 |
 | 4. Portfolio & Analytics | 3/3 | Complete | 2026-04-09 |
 | 5. Polish & Mobile | 2/2 | Complete | 2026-04-09 |
