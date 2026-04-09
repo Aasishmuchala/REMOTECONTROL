@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@theme inline {
+:root {
   /* CoinXI Exchange — Dark Glassmorphism */
   --color-bg: #0a0a0f;
   --color-surface: #0f0f1a;
