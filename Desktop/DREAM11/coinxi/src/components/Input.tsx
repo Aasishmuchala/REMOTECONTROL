@@ -23,7 +23,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             {label}
           </label>
         )}
-        <div className="relative flex items-center">
+        <div className="relative flex items-center glow-hover rounded-xl">
           {prefix && (
             <span className="absolute left-3 text-sm text-[var(--color-text-muted)] font-mono">
               {prefix}

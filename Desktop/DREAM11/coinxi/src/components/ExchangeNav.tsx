@@ -22,7 +22,7 @@ export default function ExchangeNav() {
               key={tab.name}
               href={tab.path}
               className={[
-                'relative flex flex-col items-center justify-center gap-1 px-4 py-2',
+                'relative flex flex-col items-center justify-center gap-1 px-4 py-2 min-h-[44px]',
                 'text-xs font-medium uppercase tracking-wider transition-colors duration-150',
                 'active:scale-90',
                 isActive

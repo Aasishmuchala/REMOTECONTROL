@@ -92,7 +92,7 @@ export default function OpenOrders({ pairId, refreshKey }: OpenOrdersProps) {
           {orders.map((order) => (
             <div
               key={order.id}
-              className="flex items-center justify-between gap-3 rounded-xl glass px-3 py-2.5"
+              className="flex items-center justify-between gap-3 rounded-xl glass px-3 py-2 min-h-[44px]"
             >
               <div className="flex items-center gap-3 min-w-0">
                 <span className={[
@@ -120,7 +120,7 @@ export default function OpenOrders({ pairId, refreshKey }: OpenOrdersProps) {
                 variant="danger"
                 isLoading={cancellingId === order.id}
                 onClick={() => handleCancel(order.id)}
-                className="text-xs px-3 py-1.5 shrink-0"
+                className="text-xs px-3 min-h-[44px] shrink-0"
               >
                 Cancel
               </Button>

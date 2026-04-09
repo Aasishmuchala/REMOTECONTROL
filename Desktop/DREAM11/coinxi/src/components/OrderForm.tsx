@@ -151,7 +151,7 @@ export default function OrderForm({ pairId, walletBalance, bids, asks, onOrderPl
               key={s}
               onClick={() => setSide(s)}
               className={cn(
-                'flex-1 py-2.5 text-sm font-semibold capitalize transition-colors duration-150',
+                'flex-1 min-h-[44px] text-sm font-semibold capitalize transition-colors duration-150',
                 side === s
                   ? s === 'buy'
                     ? 'bg-[var(--color-green)] text-[#0a0a0f]'
@@ -171,7 +171,7 @@ export default function OrderForm({ pairId, walletBalance, bids, asks, onOrderPl
               key={t}
               onClick={() => setOrderType(t)}
               className={cn(
-                'px-4 py-1.5 rounded-lg text-xs font-medium capitalize transition-colors duration-150',
+                'px-4 min-h-[44px] flex items-center rounded-lg text-xs font-medium capitalize transition-colors duration-150',
                 orderType === t
                   ? 'bg-[var(--color-cyan-dim)] text-[var(--color-cyan)] border border-[var(--color-cyan)]'
                   : 'text-[var(--color-text-muted)] hover:text-[var(--color-text-secondary)]'
