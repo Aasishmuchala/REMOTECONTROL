@@ -16,7 +16,7 @@ CoinXI v1.0 delivers a fully functional credits-only crypto-fiat exchange with A
 - [ ] **Phase 2: Market Data & Real-Time** - Simulated price feed, order book state, real-time broadcasts, recent trades
 - [x] **Phase 3: Trading UI End-to-End** - Connect all trading components, confirmation flows, depth validation UX, slippage display (completed 2026-04-08)
 - [x] **Phase 4: Portfolio & Analytics** - Holdings dashboard, unrealized/realized P&L, open orders view, trade history (completed 2026-04-09)
-- [ ] **Phase 5: Polish & Mobile** - Mobile-responsive layout, cinematic animations, micro-interactions, depth chart
+- [x] **Phase 5: Polish & Mobile** - Mobile-responsive layout, cinematic animations, micro-interactions, depth chart (completed 2026-04-09)
 
 ## Phase Details
 
@@ -148,8 +148,8 @@ Plans:
 **Plans**: 2 plans in 2 waves
 
 Plans:
-- [ ] 05-01-PLAN.md — Mobile responsive layout + glow-hover utility + GlassCard interactive mode + 44px touch targets
-- [ ] 05-02-PLAN.md — Depth chart (lightweight-charts) + page transitions (template.tsx) + visual verification
+- [x] 05-01-PLAN.md — Mobile responsive layout + glow-hover utility + GlassCard interactive mode + 44px touch targets
+- [x] 05-02-PLAN.md — Depth chart (lightweight-charts) + page transitions (template.tsx) + visual verification
 
 ---
 
@@ -164,7 +164,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | 2. Market Data & Real-Time | 4/4 | Complete |  |
 | 3. Trading UI End-to-End | 1/1 | Complete   | 2026-04-08 |
 | 4. Portfolio & Analytics | 3/3 | Complete | 2026-04-09 |
-| 5. Polish & Mobile | 0/2 | Planned | - |
+| 5. Polish & Mobile | 2/2 | Complete | 2026-04-09 |
 
 ## Coverage Summary
 
