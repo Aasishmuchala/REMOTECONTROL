@@ -120,7 +120,12 @@ Plans:
   4. User can view open orders tabbed by status (pending, partially filled, filled, cancelled) with order details and timestamps
   5. User can browse paginated trade history (50 trades per page) showing price, quantity, pair, side, and timestamp for every completed fill
 
-**Plans**: TBD
+**Plans**: 3 plans in 3 waves
+
+Plans:
+- [ ] 04-01-PLAN.md — TDD: computePositions pure function (cost basis, P&L math) with decimal.js unit tests
+- [ ] 04-02-PLAN.md — API routes: GET /api/portfolio + GET /api/orders/all with status filter
+- [ ] 04-03-PLAN.md — UI: PortfolioHoldings (live P&L cards) + PortfolioOrders (status tabs) + page rewrite
 
 ---
 
@@ -154,7 +159,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | 1. Core Engine | 0/6 | Planned    |  |
 | 2. Market Data & Real-Time | 4/4 | Complete |  |
 | 3. Trading UI End-to-End | 1/1 | Complete   | 2026-04-08 |
-| 4. Portfolio & Analytics | 0/TBD | Not started | - |
+| 4. Portfolio & Analytics | 0/3 | Planned | - |
 | 5. Polish & Mobile | 0/TBD | Not started | - |
 
 ## Coverage Summary
