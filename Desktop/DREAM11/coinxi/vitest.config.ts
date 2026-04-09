@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
-  resolve: { alias: { '@': '/Users/aasish/.claude/worktrees/agent-ac6c95da/Desktop/DREAM11/coinxi/src' } },
+  resolve: { alias: { '@': '/Users/aasish/Desktop/DREAM11/coinxi/src' } },
   test: {
     environment: 'node',
     globals: true,
