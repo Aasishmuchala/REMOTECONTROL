@@ -505,7 +505,7 @@ const recentOrders = await db
 
 ---
 
-## Open Questions
+## Open Questions (RESOLVED)
 
 1. **USDC balance card: what value to show?**
    - What we know: `wallet.totalBalance` conflates USDC and crypto credits. `wallet.availableBalance` does not include locked funds.
