@@ -2,8 +2,8 @@
 phase: 4
 slug: portfolio-analytics
 status: draft
-nyquist_compliant: false
-wave_0_complete: false
+nyquist_compliant: true
+wave_0_complete: true
 created: 2026-04-09
 ---
 
@@ -38,12 +38,15 @@ created: 2026-04-09
 
 | Task ID | Plan | Wave | Requirement | Threat Ref | Secure Behavior | Test Type | Automated Command | File Exists | Status |
 |---------|------|------|-------------|------------|-----------------|-----------|-------------------|-------------|--------|
-| 04-01-01 | 01 | 0 | PORT-01, PORT-02, PORT-03 | — | N/A | unit | `cd coinxi && npx vitest run src/__tests__/lib/portfolio.test.ts` | ❌ W0 | ⬜ pending |
-| 04-01-02 | 01 | 0 | PORT-04 | — | N/A | unit | `cd coinxi && npx vitest run src/__tests__/api/orders-all.test.ts` | ❌ W0 | ⬜ pending |
-| 04-01-03 | 01 | 0 | PORT-01, PORT-02, PORT-03 | — | N/A | integration | `cd coinxi && npx vitest run src/__tests__/integration/portfolio.test.tsx` | ❌ W0 | ⬜ pending |
-| 04-02-01 | 02 | 1 | PORT-01, PORT-02, PORT-03 | — | N/A | unit | `cd coinxi && npx vitest run src/__tests__/lib/portfolio.test.ts` | ❌ W0 | ⬜ pending |
-| 04-02-02 | 02 | 1 | PORT-04 | — | N/A | unit | `cd coinxi && npx vitest run src/__tests__/api/orders-all.test.ts` | ❌ W0 | ⬜ pending |
-| 04-03-01 | 03 | 2 | PORT-01, PORT-02, PORT-03, PORT-04 | — | N/A | integration | `cd coinxi && npx vitest run src/__tests__/integration/portfolio.test.tsx` | ❌ W0 | ⬜ pending |
+| 04-01-01 | 01 | 1 | PORT-01, PORT-02, PORT-03 | — | N/A | unit | `cd coinxi && npx vitest run src/__tests__/lib/portfolio.test.ts` | Created by 04-01-01 | ⬜ pending |
+| 04-01-02 | 01 | 1 | PORT-01, PORT-02, PORT-03 | — | N/A | unit | `cd coinxi && npx vitest run src/__tests__/lib/portfolio.test.ts` | Created by 04-01-01 | ⬜ pending |
+| 04-02-01 | 02 | 2 | PORT-01, PORT-04 | — | N/A | unit | `cd coinxi && npx vitest run src/__tests__/api/orders-all.test.ts` | Created by 04-02-01 | ⬜ pending |
+| 04-02-02 | 02 | 2 | PORT-01 | T-04-05 | Aggregated positions only | unit | `cd coinxi && npx vitest run src/__tests__/api/orders-all.test.ts` | Created by 04-02-01 | ⬜ pending |
+| 04-02-03 | 02 | 2 | PORT-04 | T-04-02, T-04-04 | IDOR + DB-level date filter | unit | `cd coinxi && npx vitest run src/__tests__/api/orders-all.test.ts` | Created by 04-02-01 | ⬜ pending |
+| 04-03-01 | 03 | 3 | PORT-01, PORT-02, PORT-03, PORT-04 | — | N/A | integration | `cd coinxi && npx vitest run src/__tests__/integration/portfolio.test.tsx` | Created by 04-03-01 | ⬜ pending |
+| 04-03-02 | 03 | 3 | PORT-01, PORT-02, PORT-03 | — | N/A | integration | `cd coinxi && npx vitest run src/__tests__/integration/portfolio.test.tsx` | Created by 04-03-01 | ⬜ pending |
+| 04-03-03 | 03 | 3 | PORT-04 | — | N/A | integration | `cd coinxi && npx vitest run src/__tests__/integration/portfolio.test.tsx` | Created by 04-03-01 | ⬜ pending |
+| 04-03-04 | 03 | 3 | PORT-01, PORT-04 | — | N/A | integration | `cd coinxi && npx vitest run --reporter=verbose` | Created by 04-03-01 | ⬜ pending |
 
 *Status: ⬜ pending · ✅ green · ❌ red · ⚠️ flaky*
 
@@ -51,9 +54,11 @@ created: 2026-04-09
 
 ## Wave 0 Requirements
 
-- [ ] `src/__tests__/lib/portfolio.test.ts` — unit tests for computePositions (cost basis, unrealized/realized P&L with decimal.js precision)
-- [ ] `src/__tests__/api/orders-all.test.ts` — unit tests for /api/orders/all (status filter, 7-day limit)
-- [ ] `src/__tests__/integration/portfolio.test.tsx` — integration tests for PortfolioHoldings + PortfolioOrders components
+- [x] `src/__tests__/lib/portfolio.test.ts` — unit tests for computePositions (cost basis, unrealized/realized P&L with decimal.js precision) — **created by Plan 01 Task 1**
+- [x] `src/__tests__/api/orders-all.test.ts` — unit tests for /api/orders/all (status filter, 7-day DB-level limit, auth, IDOR) — **created by Plan 02 Task 1**
+- [x] `src/__tests__/integration/portfolio.test.tsx` — integration tests for PortfolioHoldings + PortfolioOrders components — **created by Plan 03 Task 1**
+
+*All Wave 0 test files are created by plan tasks (RED phase) before their corresponding implementation tasks.*
 
 *Existing test infrastructure (vitest, @testing-library/react, jsdom) covers all needs.*
 
@@ -70,11 +75,11 @@ created: 2026-04-09
 
 ## Validation Sign-Off
 
-- [ ] All tasks have `<automated>` verify or Wave 0 dependencies
-- [ ] Sampling continuity: no 3 consecutive tasks without automated verify
-- [ ] Wave 0 covers all MISSING references
-- [ ] No watch-mode flags
-- [ ] Feedback latency < 15s
-- [ ] `nyquist_compliant: true` set in frontmatter
+- [x] All tasks have `<automated>` verify or Wave 0 dependencies
+- [x] Sampling continuity: no 3 consecutive tasks without automated verify
+- [x] Wave 0 covers all MISSING references
+- [x] No watch-mode flags
+- [x] Feedback latency < 15s
+- [x] `nyquist_compliant: true` set in frontmatter
 
-**Approval:** pending
+**Approval:** ready
