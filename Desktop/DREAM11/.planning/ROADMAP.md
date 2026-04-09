@@ -15,7 +15,7 @@ CoinXI v1.0 delivers a fully functional credits-only crypto-fiat exchange with A
 - [ ] **Phase 1: Core Engine** - Financial primitives: auth, wallet ledger, matching engine, decimal math, Drizzle/SQLite schema, order APIs, UI foundation
 - [ ] **Phase 2: Market Data & Real-Time** - Simulated price feed, order book state, real-time broadcasts, recent trades
 - [x] **Phase 3: Trading UI End-to-End** - Connect all trading components, confirmation flows, depth validation UX, slippage display (completed 2026-04-08)
-- [ ] **Phase 4: Portfolio & Analytics** - Holdings dashboard, unrealized/realized P&L, open orders view, trade history
+- [x] **Phase 4: Portfolio & Analytics** - Holdings dashboard, unrealized/realized P&L, open orders view, trade history (completed 2026-04-09)
 - [ ] **Phase 5: Polish & Mobile** - Mobile-responsive layout, cinematic animations, micro-interactions, depth chart
 
 ## Phase Details
@@ -123,9 +123,9 @@ Plans:
 **Plans**: 3 plans in 3 waves
 
 Plans:
-- [ ] 04-01-PLAN.md — TDD: computePositions pure function (cost basis, P&L math) with decimal.js unit tests
-- [ ] 04-02-PLAN.md — API routes: GET /api/portfolio + GET /api/orders/all with status filter
-- [ ] 04-03-PLAN.md — UI: PortfolioHoldings (live P&L cards) + PortfolioOrders (status tabs) + page rewrite
+- [x] 04-01-PLAN.md — TDD: computePositions pure function (cost basis, P&L math) with decimal.js unit tests
+- [x] 04-02-PLAN.md — API routes: GET /api/portfolio + GET /api/orders/all with status filter
+- [x] 04-03-PLAN.md — UI: PortfolioHoldings (live P&L cards) + PortfolioOrders (status tabs) + page rewrite
 
 ---
 
@@ -159,7 +159,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | 1. Core Engine | 0/6 | Planned    |  |
 | 2. Market Data & Real-Time | 4/4 | Complete |  |
 | 3. Trading UI End-to-End | 1/1 | Complete   | 2026-04-08 |
-| 4. Portfolio & Analytics | 0/3 | Planned | - |
+| 4. Portfolio & Analytics | 3/3 | Complete | 2026-04-09 |
 | 5. Polish & Mobile | 0/TBD | Not started | - |
 
 ## Coverage Summary
