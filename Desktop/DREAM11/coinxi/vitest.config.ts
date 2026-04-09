@@ -1,8 +1,7 @@
 import { defineConfig } from 'vitest/config'
-import tsconfigPaths from 'vite-tsconfig-paths'
 
 export default defineConfig({
-  plugins: [tsconfigPaths()],
+  resolve: { alias: { '@': '/Users/aasish/.claude/worktrees/agent-ac6c95da/Desktop/DREAM11/coinxi/src' } },
   test: {
     environment: 'node',
     globals: true,
