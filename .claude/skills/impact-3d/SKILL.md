@@ -1,0 +1,186 @@
+---
+name: impact-3d
+description: |
+  Art-direct and produce architectural visualization in the style of IMPACT 3D
+  (Impact Design Studio, Ahmedabad — Manji Vagjiyani, 3ds Max + Chaos Corona):
+  EXTERIORS (villas, bungalows, apartment towers, resorts, townships),
+  INTERIORS (living rooms, bedrooms, kitchens, bathrooms, lobbies, pooja rooms,
+  offices, showrooms) and CINEMATIC WALKTHROUGH FILMS. Covers camera, time-of-day
+  lighting narrative, Corona/V-Ray render setup, material realism, Forest Pack
+  environments, Indian architectural context, staging, post-production, and
+  briefs for the Sthyra pipeline (MaxDirector, MaxGaffer, MatForge, ShotRunner).
+  Use this skill whenever the user mentions Impact 3D, Manji Vagjiyani, Impact
+  Design Studio, archviz, architectural rendering, exterior or interior render,
+  villa/bungalow/apartment visualization, 3D walkthrough, property film, Corona
+  render, "make it look like Impact 3D", or wants render briefs, lighting specs,
+  material lists, shot lists, or image-generation prompts for architecture —
+  even if they only say "render this house" or "render this room".
+triggers:
+  - "impact 3d"
+  - "manji"
+  - "archviz"
+  - "architectural visualization"
+  - "exterior render"
+  - "interior render"
+  - "villa render"
+  - "walkthrough"
+  - "corona render"
+  - "3ds max render"
+---
+
+# IMPACT 3D — Archviz Art Direction (v2: exteriors + interiors + films)
+
+Reproduce the look, storytelling and production discipline of IMPACT 3D
+(Impact Design Studio, Ahmedabad, est. 2010, owner Manji Vagjiyani). Version 1
+of this skill covered exteriors only. Version 2 adds a full **interiors**
+playbook, a **cinematic film** playbook, and the bridge into the Sthyra tools.
+
+Ground truth comes from the studio's published breakdowns (Chaos Corona blog
+interview "Mastering the art of archviz", the Autodesk AREA "Making of
+VERANTES", the ANUTHAM / VENETIAN / LE PARQUE / Meraki Hills project pages)
+and its YouTube output. See `references/sources.md` for the catalogue and for
+what could not be verified directly.
+
+## 1. Route first
+
+| User wants | Read | Then produce |
+|---|---|---|
+| Exterior still (villa, bungalow, tower, resort, aerial) | `references/exteriors.md` | shot list + lighting spec + environment recipe + post recipe |
+| Interior still (any room, lobby, showroom, office) | `references/interiors.md` | shot list + lighting/LightMix spec + material & staging list + post recipe |
+| Walkthrough / property film / animation | `references/cinematic-films.md` | storyboard + shot durations + music/sound brief + edit plan |
+| Both exterior and interior of one project | all three | one project bible; keep one time-of-day arc across shots |
+| Image-gen prompt only (Higgsfield, Flux, gpt-image) | §4 of the relevant reference | prompt block from `assets/brief-template.md` §5 |
+| Brief for MaxDirector / MaxGaffer / MatForge / ShotRunner | §6 below + `assets/brief-template.md` | filled template |
+
+Ask only if the answer changes the deliverable: project type, room list, which
+times of day, aspect ratio and channel (Instagram 4:5, brochure 3:2, film 16:9).
+Otherwise assume: villa or apartment in Gujarat, three moods (early morning,
+early evening, moonlit night), 3:2 stills at 4000 px, 16:9 4K film.
+
+## 2. The IMPACT 3D signature (apply to every deliverable)
+
+1. **Story before pixels.** Every image answers "what is it like to live here?"
+   Pick a moment, a season, a person's activity, then compose for that. Manji's
+   own framing: the goal is "a conceptual documentary" that helps the viewer
+   "visualize a lifestyle".
+2. **Time-of-day is the narrative device.** Present the same space at **early
+   morning**, **early evening (golden/blue hour)** and **moonlit night** so the
+   viewer sees how the architecture changes. Never deliver only noon.
+3. **Material realism is non-negotiable.** "Every surface texture and material
+   should feel as naturally realistic as possible": micro-roughness variation,
+   edge wear, correct IOR, real-world texture scale, no plastic sheen.
+4. **The environment is alive.** Forest Pack scatter for lawns, shrubs, trees
+   with species variation; water and foliage in motion (simulated in films,
+   implied by ripples and wind-bent grass in stills).
+5. **Indian context, rendered with confidence.** Vibrant but controlled colour,
+   spiritual and cultural motifs (jaali, pooja niche, brass, marigold, jhoola),
+   fusion of tradition and modernity, regional planting (frangipani, neem,
+   palms, bougainvillea), the hard bright light of Gujarat softened by time of
+   day.
+6. **Camera highlights key features and connections.** Compositions show the
+   relationship between indoor and outdoor: the living room framing the pool,
+   the courtyard seen through the jaali, the terrace looking back at the city.
+7. **Film = visuals + camera + music in unison.** Camera work with "finesse",
+   music as the "heartbeat", and harmony in post. No shot exists without a
+   reason in the edit.
+8. **Post-production for harmony, not rescue.** Grade for consistency across
+   the set; add glare, bloom, subtle chromatic aberration and vignette; never
+   fix bad lighting in Photoshop.
+
+## 3. Universal production workflow
+
+Run these steps for any deliverable; the references specialise each step.
+
+1. **Brief** — project, location, architect, audience, channel, moods, hero
+   features. Fill `assets/brief-template.md` §1.
+2. **Shot list** — 1 hero + 2–4 supporting per space or facade; one shot per
+   mood minimum. Name shots `SPACE_MOOD_NN` (e.g. `LIVING_EVENING_02`).
+3. **Blocking** — physical camera, focal length, height, tilt correction. Lock
+   cameras before lighting.
+4. **Lighting** — sun/sky or HDRI for the mood, then practicals in named light
+   groups (LightMix in Corona, Light Mix in V-Ray). Exposure set per camera.
+5. **Materials** — PBR from reference, scale-checked, roughness variation,
+   displacement where the eye lands (rugs, stone, lawns, brick).
+6. **Environment and staging** — scatter, water, entourage, props with a story.
+7. **Render** — Corona: noise limit 2–3 %, denoise 0.65, LUT on, bloom/glare
+   on; or V-Ray 7 / Vantage through ShotRunner. Test at 1/4 res per mood first.
+8. **Post** — Corona VFB / Lightroom / Photoshop: per-mood grade, glare, CA,
+   vignette, then a set-wide pass for consistency.
+9. **QA** — run §7 checklist, then deliver with shot names and mood tags.
+
+## 4. Exterior vs interior at a glance
+
+| Decision | Exterior | Interior |
+|---|---|---|
+| Camera height | 1.6 m eye-level, 15–40 m elevated, 100 m+ aerial | 1.1–1.5 m; 0.9 m for bedrooms/lounges |
+| Focal length | 24–35 mm (35 mm full frame); 50–85 mm for facade details | 18–24 mm; 35 mm for vignettes; never wider than 16 mm |
+| Key light | Corona Sun + Sky or HDRI; sun 15–35° elevation for morning/evening | Sun/sky through openings; practicals carry evening and night |
+| Fill | Sky dome, ground bounce | Walls and ceiling bounce; cove/indirect LED strips |
+| Signature mood | Golden-hour facade with interior glow; moonlit night with landscape lighting | Morning light raking across floor; evening warm practicals against blue exterior |
+| Environment | Forest Pack lawn, shrubs, trees; water; cars; people at distance | Layered textiles, plants, books, food, everyday traces; window view matters |
+| Exposure (Corona EV) | −1 to +1 day; −4 to −6 night | +1 to +3 day; −1 to +1 evening; −2 to −4 night |
+| Post emphasis | Atmosphere, haze, sky grade | Warmth, contrast in shadows, highlight roll-off |
+
+## 5. Corona ↔ V-Ray translation (for the Sthyra pipeline)
+
+Impact 3D renders in Chaos Corona. The Sthyra tools target V-Ray 7 + Vantage.
+Translate rather than approximate:
+
+| Corona | V-Ray 7 | Note |
+|---|---|---|
+| Corona Sun + Corona Sky | VRaySun + VRaySky | Match elevation/azimuth; Corona intensity 1.0 ≈ VRaySun intensity 1.0 with physical camera |
+| Corona Light (disk/rect/sphere) | VRayLight (disc/plane/sphere) | Keep light groups named identically for Light Mix |
+| Corona LightMix | V-Ray Light Mix render element | Same workflow: one render, balance later |
+| CoronaPhysicalMtl | VRayMtl (roughness mode ON) | MatForge already writes roughness mode + Fresnel |
+| Corona Camera exposure EV | VRayPhysicalCamera exposure value | Same EV convention |
+| Corona tone mapping (highlight compress, LUT) | V-Ray Frame Buffer layers (Filmic, LUT) | Apply the same LUT file |
+| Corona Volume Material / Corona Distance | VRayEnvironmentFog / VRayDistanceTex | Use fog sparingly for morning shots |
+| Corona Proxy / Forest Pack | VRayProxy / Forest Pack | Forest Pack renders in both |
+
+## 6. Sthyra tool hand-offs
+
+- **MaxDirector** (cameras, storyboard): give it the shot list from the
+  reference §"Shot list" plus the mood arc. Brief language: "establishing
+  aerial at early morning, approach dolly, arrival at entrance, living room
+  reveal toward pool at golden hour, night exterior with landscape lighting".
+- **MaxGaffer** (lighting match): hand it one reference image per mood. Use
+  the mood reference descriptions in `references/exteriors.md` §3 and
+  `references/interiors.md` §3 to pick references; lock white balance to the
+  values listed there before pressing MATCH LIGHTING.
+- **MatForge** (materials): submit the material list from
+  `references/interiors.md` §5 or `references/exteriors.md` §5, one reference
+  photo per material, at 4K for hero surfaces and 2K elsewhere.
+- **ShotRunner** (Vantage batch): each camera becomes a timed shot; set
+  durations from `references/cinematic-films.md` §3.
+
+## 7. QA checklist before delivery
+
+- [ ] Every space has at least one morning, one evening and one night frame
+      (or the user explicitly chose fewer moods).
+- [ ] Verticals are corrected (no keystoning) unless the shot is an aerial.
+- [ ] No material reads as plastic; roughness varies across each surface.
+- [ ] Texture scale checked against a known object (door 2.1 m, brick 230 mm,
+      tile 600 mm).
+- [ ] Vegetation has at least three species and size variation; no cloned
+      silhouettes side by side.
+- [ ] Interiors show a believable window view and daylight direction that
+      matches the exterior sun.
+- [ ] Practical lights are grouped and named; night shots are lit by
+      practicals, not by a global boost.
+- [ ] Human presence is implied (props, an open book, a towel) or shown at
+      distance with correct scale.
+- [ ] Set-wide grade is consistent: same LUT, same white balance logic per
+      mood, same vignette strength.
+- [ ] Shot names follow `SPACE_MOOD_NN`; deliverables listed with resolution.
+
+## 8. Files in this skill
+
+- `references/exteriors.md` — facades, aerials, landscape, night exteriors.
+- `references/interiors.md` — room-by-room playbook, LightMix, staging,
+  Indian interior vocabulary (new in v2).
+- `references/cinematic-films.md` — walkthrough structure, camera moves,
+  music and edit, delivery specs (new in v2).
+- `references/sources.md` — channel and article catalogue, project list,
+  verification caveats.
+- `assets/brief-template.md` — fill-in brief for stills, films and image-gen
+  prompts.
