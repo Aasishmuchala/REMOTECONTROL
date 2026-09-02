@@ -253,6 +253,19 @@ fi
 need_cmd prime-agent || die "prime-agent is still not runnable; check 'npm prefix -g'"
 info "prime-agent $(prime-agent --version 2>&1 | tr -d '\n' || echo "v$version")"
 
+# Work around a packaging gap in the release bundle: it lazily imports
+# dist/bundle/amazon-bedrock.js, which the tarball does not ship, so Prime Agent
+# crashes at startup on machines with AWS credentials in the environment
+# (upstream issue #751). The unbundled module is present in the pi-ai
+# dependency, so a one-line re-export at the expected path fixes it.
+pkg_root="$(npm root -g)/prime-agent"
+bedrock_shim="$pkg_root/dist/bundle/amazon-bedrock.js"
+bedrock_impl="$pkg_root/node_modules/@earendil-works/pi-ai/dist/providers/amazon-bedrock.js"
+if [ ! -f "$bedrock_shim" ] && [ -f "$bedrock_impl" ] && [ -d "$pkg_root/dist/bundle" ]; then
+  printf 'export * from "../../node_modules/@earendil-works/pi-ai/dist/providers/amazon-bedrock.js";\n' > "$bedrock_shim"
+  info "added Bedrock provider shim (release bundle omits amazon-bedrock.js)"
+fi
+
 # ---------------------------------------------------------------- Claude
 
 if [ "$configure_claude" = 1 ]; then

@@ -24,7 +24,10 @@ The script:
    `SHA256SUMS`, and verifies the checksum before installing anything.
 3. Runs `npm install -g` on the verified tarball. This also prepares the Python kernel
    runtime (uv, Python 3.11, `prime-agent-runtime`) that Prime Agent uses as its one tool.
-4. Writes `defaultProvider: "anthropic"` to `~/.prime/agent/settings.json`, leaving any
+4. Adds a one-line shim for the Bedrock provider module that the 0.9.1 release bundle
+   imports but does not ship. Without it Prime Agent crashes at startup on a machine that
+   has AWS credentials in the environment.
+5. Writes `defaultProvider: "anthropic"` to `~/.prime/agent/settings.json`, leaving any
    existing settings alone.
 
 Options:
@@ -33,7 +36,7 @@ Options:
 |------|--------|
 | `--skip-python` | Skip the Python runtime now; Prime Agent builds it on first use |
 | `--no-claude-config` | Do not touch `~/.prime/agent/settings.json` |
-| `--model <id>` | Also set `defaultModel`, for example `--model claude-sonnet-4-5` |
+| `--model <id>` | Also set `defaultModel`, for example `--model claude-sonnet-4-5`. Use this if your shell has AWS credentials, otherwise Prime Agent may pick Bedrock over Anthropic |
 | `<version>` | Install a specific version, for example `./install.sh 0.9.1` |
 
 No sudo is needed when Node comes from Homebrew or nvm. The script never stores a
@@ -97,6 +100,11 @@ prime-agent shutdown --force
 npm uninstall -g prime-agent
 rm -rf ~/.prime/agent       # settings, auth, sessions, kernel runtime
 ```
+
+## Not for Claude Code web sessions
+
+This is for your Mac. Claude Code's cloud containers block Prime Intellect's CDN and the
+claude.ai OAuth endpoint, so neither the install nor the Pro/Max login completes there.
 
 ## Safety note
 
