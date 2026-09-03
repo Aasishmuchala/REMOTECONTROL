@@ -1,41 +1,37 @@
 ---
 name: impact-3d-2-0
-description: |
-  IMPACT 3D 2.0. Art-direct, produce and review architectural visualization
-  in the style of IMPACT 3D (Impact Design Studio, Ahmedabad — Manji
-  Vagjiyani, 3ds Max + Chaos Corona):
-  EXTERIORS (villas, bungalows, apartment towers, resorts, townships),
-  INTERIORS (living rooms, bedrooms, kitchens, bathrooms, lobbies, pooja rooms,
-  offices, showrooms) and CINEMATIC WALKTHROUGH FILMS. Covers camera, time-of-day
-  lighting narrative, Corona/V-Ray render setup, material realism, Forest Pack
-  environments, Indian architectural context, staging, post-production, and
-  briefs for the Sthyra pipeline (MaxDirector, MaxGaffer, MatForge, ShotRunner),
-  grounded in a shot-by-shot catalogue of 17 films from the studio's channel,
-  with a V-Ray 7 (2026) render, material and VFB grade spec, Nano Banana
-  Pro as the default model for generated concept images and Seedance 2.0
-  as the default model for generated walkthrough clips.
-  Also reviews an existing walkthrough film against the studio's arc and
-  quality bar. Use this skill whenever the user mentions Impact 3D, Impact
-  3D 2.0, Manji Vagjiyani, Impact Design Studio, archviz, architectural rendering, exterior or interior render,
-  villa/bungalow/apartment visualization, 3D walkthrough, property film, Corona
-  render, "make it look like Impact 3D", "check my walkthrough", or wants render briefs, lighting specs,
-  material lists, shot lists, or image- and video-generation prompts for
-  architecture —
-  even if they only say "render this house" or "render this room".
-triggers:
-  - "impact 3d"
-  - "impact 3d 2.0"
-  - "property film"
-  - "check my walkthrough"
-  - "manji"
-  - "archviz"
-  - "architectural visualization"
-  - "exterior render"
-  - "interior render"
-  - "villa render"
-  - "walkthrough"
-  - "corona render"
-  - "3ds max render"
+description: >-
+  IMPACT 3D 2.0: art-direct, produce and review architectural visualization in
+  the style of IMPACT 3D (Manji Vagjiyani, Ahmedabad; 3ds Max + Corona/V-Ray
+  7). Exteriors (villas, bungalows, towers, resorts, townships), interiors
+  (living, bedroom, kitchen, bath, lobby, pooja room, office, showroom) and
+  cinematic walkthrough films. Gives shot lists, time-of-day lighting
+  narrative, render and VRayMtl settings, material lists, Forest Pack
+  environments, Indian context, staging, post, Sthyra briefs (MaxDirector,
+  MaxGaffer, MatForge, ShotRunner), Nano Banana Pro prompts for stills,
+  Seedance 2.0 prompts and whole films for clips, and a scorecard review of an
+  existing walkthrough. Grounded in 17 studio films. Use whenever the user
+  mentions Impact 3D, Manji Vagjiyani, archviz, architectural rendering,
+  exterior or interior render, villa or apartment visualization, 3D
+  walkthrough, property film, Corona render, "make it look like Impact 3D",
+  "check my walkthrough", or just says "render this house" or "render this
+  room".
+metadata:
+  version: "2.0"
+  triggers:
+    - "impact 3d"
+    - "impact 3d 2.0"
+    - "property film"
+    - "check my walkthrough"
+    - "manji"
+    - "archviz"
+    - "architectural visualization"
+    - "exterior render"
+    - "interior render"
+    - "villa render"
+    - "walkthrough"
+    - "corona render"
+    - "3ds max render"
 ---
 
 # IMPACT 3D 2.0 — Archviz Art Direction (exteriors, interiors, films, generated media)
