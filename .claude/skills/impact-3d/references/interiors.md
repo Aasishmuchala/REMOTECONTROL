@@ -281,10 +281,10 @@ Order: Corona VFB (or VFB layers) → Lightroom/Camera Raw → Photoshop.
 ## 10. Image-generation prompt pattern (2026)
 
 Use when the deliverable is a concept image rather than a 3ds Max render.
-Pick the model first: a photoreal model (gpt-image-2, Nano Banana 2,
-Flux 2, or Higgsfield's photoreal preset) for interiors; stylised models
-only for mood boards. Then write the prompt in this order, as full
-sentences, not keyword soup:
+Model: **Nano Banana Pro** by default (photorealism, materials, 4K,
+relighting, multi-reference); GPT Image 2 only if the frame carries text.
+Ask for "4K, 3:2". Then write the prompt in this order, as full sentences,
+not keyword soup:
 
 1. **Frame**: "Photorealistic architectural interior photograph,
    V-Ray 7 render quality, [room] in a contemporary Indian villa in

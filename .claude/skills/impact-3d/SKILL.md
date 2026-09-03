@@ -10,7 +10,8 @@ description: |
   environments, Indian architectural context, staging, post-production, and
   briefs for the Sthyra pipeline (MaxDirector, MaxGaffer, MatForge, ShotRunner),
   grounded in a shot-by-shot catalogue of 17 films from the studio's channel,
-  with a V-Ray 7 (2026) render, material and VFB grade spec.
+  with a V-Ray 7 (2026) render, material and VFB grade spec and Nano Banana
+  Pro as the default model for generated concept images.
   Use this skill whenever the user mentions Impact 3D, Manji Vagjiyani, Impact
   Design Studio, archviz, architectural rendering, exterior or interior render,
   villa/bungalow/apartment visualization, 3D walkthrough, property film, Corona
@@ -55,7 +56,7 @@ pages). `references/sources.md` lists both and what could not be verified.
 | Interior still (any room, lobby, showroom, office) | `references/interiors.md` | shot list + lighting/LightMix spec + material & staging list + post recipe |
 | Walkthrough / property film / animation | `references/cinematic-films.md` | storyboard + shot durations + music/sound brief + edit plan |
 | Both exterior and interior of one project | all three | one project bible; keep one time-of-day arc across shots |
-| Image-gen prompt only (Higgsfield, Flux, gpt-image) | §4 of the relevant reference | prompt block from `assets/brief-template.md` §5 |
+| Image-gen prompt only (concept image, relight, image-to-image polish) | §7 below, then §10/§11 of the relevant reference | model choice + prompt block from `assets/brief-template.md` §5 |
 | Brief for MaxDirector / MaxGaffer / MatForge / ShotRunner | §6 below + `assets/brief-template.md` | filled template |
 | "What does an Impact 3D film look like?", reference a specific project, match a specific shot | `references/films-catalogue.md` | the pattern list or the film entry, with video id |
 | V-Ray render settings, VRayMtl recipes, VFB grade, texture standards, Chaos Scatter, splats, parallax interiors | `references/vray-quality.md` | settings block + material table rows + grade preset |
@@ -177,7 +178,34 @@ quality gates. Use this translation only when reading Corona advice:
 - **ShotRunner** (Vantage batch): each camera becomes a timed shot; set
   durations from `references/cinematic-films.md` §3.
 
-## 7. QA checklist before delivery
+## 7. Model choice for generated images (2026)
+
+Default: **Nano Banana Pro** (Gemini 3 Pro Image) for every arch viz
+concept image, relight, plan-or-sketch-to-render and image-to-image polish
+of a V-Ray frame. It wins on photorealism, material consistency, native
+4K, multi-reference composition, localized edits and day-to-night
+relighting, and it is fast enough to iterate twenty variants.
+Use **GPT Image 2** only when the image carries readable text or an exact
+layout: presentation boards, signage, brochure spreads, diagrams.
+Nano Banana 2 (Flash) is the fallback for bulk, low-cost variants.
+
+Nano Banana Pro rules:
+- Write the prompt as sentences in the order given in the playbooks
+  (frame, camera, light, materials with finish words, staging, render
+  anchors). It reasons over the whole description; keyword lists
+  underperform.
+- Ask for 4K and the aspect ratio explicitly ("4K, 3:2").
+- Feed references and compose: "layout of @image1, materials of @image2,
+  light of @image3". Up to several references; the V-Ray clay or draft
+  render is the best @image1.
+- Relight instead of regenerating: "same image, change to blue hour with
+  warm interior lights on" keeps geometry and materials.
+- Localized edits for staging: "add a brass tray with three books on the
+  coffee table, nothing else changes".
+- It still invents plausible but wrong architecture; lock massing with a
+  reference or a V-Ray frame, never from text alone for a real project.
+
+## 8. QA checklist before delivery
 
 - [ ] Every space has at least one morning, one evening and one night frame
       (or the user explicitly chose fewer moods).
@@ -204,7 +232,7 @@ quality gates. Use this translation only when reading Corona advice:
       frame, night finale, credits with architect and RERA.
 - [ ] Shot names follow `SPACE_MOOD_NN`; deliverables listed with resolution.
 
-## 8. Files in this skill
+## 9. Files in this skill
 
 - `references/exteriors.md` — facades, aerials, landscape, night exteriors.
 - `references/interiors.md` — room-by-room playbook, LightMix, staging,

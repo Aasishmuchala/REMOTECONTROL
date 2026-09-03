@@ -41,7 +41,8 @@ Lawn_grass           foliage     2K   no     Forest Pack, 3 variants
 ```
 
 ## 5. Image-generation prompt (when no 3ds Max render is planned)
-Model: [gpt-image-2 | Nano Banana 2 | Flux 2 | Higgsfield photoreal]
+Model: Nano Banana Pro (default for arch viz) | GPT Image 2 (text boards only)
+Output: 4K, [3:2 | 4:5 | 16:9]
 "Photorealistic architectural [interior|exterior] photograph, V-Ray 7
 render quality, [space or facade] of a contemporary [villa|apartment|
 resort] in [city], India. [Camera: mm, height, perspective, aperture,

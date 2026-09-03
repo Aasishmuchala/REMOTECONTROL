@@ -237,8 +237,10 @@ foreground blobs, and never place identical silhouettes adjacent.
 
 ## 11. Image-generation prompt pattern (2026)
 
-Model first (photoreal: gpt-image-2, Nano Banana 2, Flux 2, Higgsfield
-photoreal), then the prompt in this order as sentences:
+Model: **Nano Banana Pro** by default (photorealism, buildable massing,
+4K, relighting, multi-reference); GPT Image 2 only for boards with text.
+Ask for "4K, 3:2" (or "4K, 16:9" for aerials). Then the prompt in this
+order as sentences:
 
 1. **Frame**: "Photorealistic architectural exterior photograph, V-Ray 7
    render quality, [contemporary villa / apartment tower / resort] in
