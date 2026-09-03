@@ -235,14 +235,37 @@ foreground blobs, and never place identical silhouettes adjacent.
 - Night exteriors with global ambient raised instead of practicals.
 - Foreground people larger than 1.8 m or staring at the camera.
 
-## 11. Image-generation prompt pattern
+## 11. Image-generation prompt pattern (2026)
 
-"Photorealistic architectural exterior photograph, [contemporary villa /
-apartment tower / resort] in Ahmedabad, Gujarat, [mood: early morning low
-sun with haze / dusk with warm interior glow through glass and blue-hour sky
-/ moonlit night with landscape lighting and an illuminated pool],
-[materials: exposed brick, teak louvers, stone cladding, glass], lush
-Forest Pack style landscape with frangipani, palms and bougainvillea, pool
-with ripples, family at the entrance at distance, 28 mm full-frame,
-corrected verticals, three-quarter view, foreground branch, Chaos Corona
-render quality, subtle bloom and glare, filmic grade, 3:2".
+Model first (photoreal: gpt-image-2, Nano Banana 2, Flux 2, Higgsfield
+photoreal), then the prompt in this order as sentences:
+
+1. **Frame**: "Photorealistic architectural exterior photograph, V-Ray 7
+   render quality, [contemporary villa / apartment tower / resort] in
+   Ahmedabad, Gujarat."
+2. **Camera**: "28 mm full-frame at 1.6 m, three-quarter view, corrected
+   verticals, foreground frangipani branch, f/11, 3:2." Aerials: "drone
+   at 30 m, 30 degrees down, natural perspective."
+3. **Light**: one sentence. Morning: "low sun from the side, long
+   shadows across the lawn, soft haze, pale blue sky." Dusk: "warm
+   interior glow through floor-to-ceiling glass, deep blue sky,
+   illuminated pool and path lights, balanced exposure." Night:
+   "moonlit dark-blue sky, uplit trees, reflections in the pool, no flat
+   ambient."
+4. **Materials with finish**: "wire-cut exposed brick with recessed
+   mortar, board-formed concrete with tie holes, weathered teak louvers,
+   low-iron glazing showing furnished rooms, honed Kota stone paving with
+   puddles."
+5. **Landscape**: "lush layered planting with frangipani, foxtail palms
+   and bougainvillea, three-model lawn, pool with ripples and caustics."
+6. **Life**: "a family at the entrance at distance, one grey sedan on
+   the drive, birds crossing the sky."
+7. **Render anchors**: "physically based materials, global
+   illumination, atmospheric depth, subtle bloom and glare, filmic ACES
+   grade, natural colour."
+8. **Negatives**: "no fisheye, no cloned trees, no HDR halo, no
+   oversaturated sky, no text, no watermark."
+
+Compose with references when available ("massing of @image1, material
+palette of @image2, sky of @image3"), generate the still, upscale, then
+animate minimally if a clip is needed.
