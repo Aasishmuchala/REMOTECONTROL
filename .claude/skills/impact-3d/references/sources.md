@@ -50,12 +50,51 @@
    Singapore; 3ds Max + Corona; "conceptual documentary presentation" to help
    viewers "visualize a lifestyle").
 
+## Films analysed shot by shot (channel @manjivagjiyani = IMPACT 3D)
+Analysed on 2026-09-03 with a server-side scene-by-scene video analyser
+(Higgsfield video analysis), because the build sandbox blocks youtube.com.
+Findings are in `films-catalogue.md`.
+
+| Video id | Title | Year | Type |
+|---|---|---|---|
+| G4KLFCpR5GE | ANUTHAM BY RAVI DESAI _ IMPACT 3D | — | towers, architect interview |
+| Bw-kFr7GcDE | VENETIAN _ IMPACT3D | — | riverfront towers |
+| OS2HVHGaiHs | THE VARANDA _ IMPACT 3D | — | towers, amenity deck |
+| 2_ojLiLywt4 | WESTERN MARINA _ IMPACT 3D | Mar 2024 | Hyderabad towers |
+| Wygo0fgCQI4 | APARNA AQUA_IMPACT 3D | 2023–24 | Hyderabad lakeside towers |
+| 3t72lxwhGvk | SUVARNABHOOMI _IMPACT 3D | Mar 2020 | Rajkot, architect interview |
+| 97jkvmDHgAk | LE PARQUE by GALA _ IMPACT 3D | Apr 2023 | resort township, orchestral cut |
+| Awn-m_M2M00 | LE PARQUE BY GALA _ IMPACT 3D | 2023 | extended cut, Indian fusion score |
+| vwT-sdRWB-Y | Le parque by Gala Ahmedabad (INDIA) | May 2023 | guitar cut |
+| n7kxiI1AB_k | Anaya @ IMPACT 3D | — | townhouses with temple |
+| IgTHxA9y6Tk | Swati Crimson | Sep 2018 | 4 BHK, interior-led |
+| l6GUwVKACAM | Serenity Lavish_IMPACT 3D | Aug 2018 | towers |
+| 2WmNoZSkbZU | Swati CLOVER _IMPACT 3D | — | commercial |
+| 6HMF_LHDUyU | TROGON _ IMPACT 3D | — | commercial twin towers |
+| 9Y6UqH41bYU | WHERE LIVES THRIVE - CENTER COURT BY TROGON | Aug 2025 | residential |
+| 6Jxizt5VsHA | THE CASCADES _ IMPACT 3D | Jan 2026 | lifestyle protagonist film |
+| tO-Vl1hLa6U | CENTURY MIRAI _ IMPACT3D | — | Bangalore, day-in-the-life narrative |
+
+Not analysed: PAVANI MIRAI
+"Discover the fifth element", WANOWAY "Rooted in Forest", PRESIDENTIAL
+TOWERS, THE CASCADES NEOPOLIS (no ids retrievable). Excluded: "Impact
+Project 3D walkthrough" (UNleV-Vakck), an unrelated York church film.
+
+Other public write-ups found but not openable from the sandbox: Ronen
+Bekerman showcases (VENETIAN, Meraki Hills, SWATI CRIMSON, SERENITY LAVISH,
+SUVARNABHOOMI animation, Anaya animation; author Shailesh Vaghjiyani),
+axyz-design blog "Discovering Le Parque" (Anima crowds), CGconnect member
+page. Software credited there: 3ds Max, Forest Pack, Corona, Phoenix FD,
+GrowFX, Anima, After Effects, DaVinci Resolve.
+
 ## What was verified and what was not
-- The YouTube channel and the article pages could not be opened from the
-  build environment (network egress to youtube.com, vimeo.com, behance.net,
-  area.autodesk.com, blog.corona-renderer.com and impactdesign.co.in is
-  blocked). Content above comes from search-engine summaries of those pages
-  and from indexed video titles.
+- The article pages could not be opened from the build environment
+  (network egress to vimeo.com, behance.net, area.autodesk.com,
+  blog.corona-renderer.com, ronenbekerman.com and impactdesign.co.in is
+  blocked); their content comes from search-engine summaries. The videos
+  were analysed server-side as listed above; the scene descriptions are
+  machine-generated and were read, not watched, so shot lengths and object
+  details are approximate.
 - Numeric settings in the playbooks (EV ranges, Kelvin, roughness values,
   noise limits, durations) are standard Corona/V-Ray archviz practice tuned
   to reproduce the studio's published look; they are not quoted from Manji

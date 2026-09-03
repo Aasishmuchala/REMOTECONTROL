@@ -6,6 +6,48 @@ Palazzo, URBANA) share a formula: architecture placed in a living landscape,
 photographed at the times of day when light has direction, with the interior
 glowing through the glass so the building reads as inhabited.
 
+## What the films show (read before the rest)
+
+From the shot-by-shot analyses in `films-catalogue.md`, the studio's
+exterior frames repeat these moves:
+
+- **The building is revealed through trees.** Low-angle tilt-up with
+  foliage in the bottom corners, then an extreme low angle straight up at
+  the towers with trees framing, then a facade seen through branches.
+- **Arrival is a sequence, not a shot.** Aerial follow of a grey or black
+  luxury car around a curve; rear track down a palm-lined road at low sun;
+  lateral track over a balustrade bridge on a lily pond; the branded
+  entrance wall with the logo in raking light and its shadow on the wall;
+  the car turning in and stopping at the porch; people walking in.
+- **Sunrise and sunset carry the exteriors.** A huge orange sun behind a
+  bridge or tower, silhouettes, sun glint on glass with a flock of birds,
+  morning mist on the water with god rays, long shadows across paving.
+  Midday appears only for sports courts, playgrounds and pools.
+- **Water is the mirror.** Towers reflected symmetrically in a still lake
+  or lap pool; a water-level camera across the pool to striped umbrellas;
+  three cabanas reflected in still water; a lily pond with a gazebo.
+- **Landscape gets its own beats.** Top-down over the courtyard lawn,
+  organic farm plots, a brook through the lawn, tiered gardens with
+  cascading vines, corten screens on a stone path, clay urns with lotus,
+  bougainvillea over a waterfall wall, a flowering tree in a circular
+  planter with joggers around it.
+- **Amenity exteriors.** Pool with cabanas, lagoon pool with rock edges,
+  lap pool with trees on islands, rooftop infinity pool, tennis court shot
+  symmetrically and then from above, glass-walled badminton court, sunken
+  seating with a small pool, playground with a red or spiral slide,
+  amphitheatre, outdoor cinema with string lights, rooftop fire pit.
+- **Dusk is the hero.** Pool with underwater lights and fountains, interior
+  glow through every window, the plaza frame repeated with lights on,
+  balconies with candles, a lit entrance with a car and its headlights.
+- **Night finale.** Low-angle tower with lit windows and people on
+  balconies, cabanas lit from within against a deep blue sky, fire pit,
+  entry road with ground lights, a night aerial with a city grid or a lit
+  estate ringed by dark forest, and once each a full moon, four searchlights
+  and fireworks over a lake.
+- **Indian cues.** A brick entrance with a tiled roof, a white carved
+  temple seen through wood slats, a golden jaali pavilion with pigeons, a
+  mandir in the garden lit at night, purple and pink flowering trees.
+
 Contents
 1. Shot list by project type
 2. Camera

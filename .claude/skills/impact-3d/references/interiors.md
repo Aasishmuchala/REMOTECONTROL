@@ -6,6 +6,50 @@ through the window that connects to the exterior set, and a lived-in but
 disciplined staging. The interior work sits inside the same time-of-day
 narrative as the exteriors (early morning, early evening, moonlit night).
 
+## What the films show (read before the rest)
+
+Sixteen IMPACT 3D films were analysed shot by shot (`films-catalogue.md`).
+The interior frames in them agree on this recipe:
+
+- **One wide per room, one styled close-up.** The wide is a static frame
+  or a slow pan at about 1.2 m; the close-up is at shallow depth on a
+  single group of objects: glasses on an open magazine on a velvet ottoman,
+  lilies in a white vase with a copper vase and a blue glass bottle, a
+  nightstand with a clock and yellow flowers, three books and a succulent on
+  a coffee table, a tray with coffee, croissants and fruit beside a red
+  espresso machine, pancakes on the breakfast bar with a bag of vegetables,
+  pomegranates on marble, a dining table set with gold cutlery and white
+  roses.
+- **Daylight through sheers or louvers.** Sheer beige or white curtains,
+  wooden louvers throwing stripes, a curtain blowing in a breeze. Midday is
+  bright and even in the wides; sunset fills the window in the bedroom.
+- **One bold artwork per room.** A large circular abstract over a grey
+  textured stone headboard wall, a red skyline painting in the dining room,
+  black-and-white abstracts in a corridor.
+- **Palette.** Earth tones: tan leather, striped rugs in browns and creams,
+  grey stone feature walls, wood panelling, brass or copper accents, one
+  colour accent (blue velvet, teal chairs, green velvet, mustard).
+- **Chandeliers as camera subjects.** Ring, tiered gold, four-ring, black
+  modern; the studio shoots top-down through them onto the table.
+- **The balcony as the hinge.** Two chairs, a small table with coffee cups
+  or a bowl of nuts and two glasses, potted plants, candles at dusk; often
+  photographed from outside looking in through the sliding glass so the warm
+  interior sits against the cool evening.
+- **Warm practicals from dusk.** Cove LEDs behind wall panels, pendants,
+  bedside lamps, Edison-bulb clusters; ceilings never washed flat.
+- **Life without clutter.** Steam from a pot, a TV showing content, a
+  ceiling fan turning, drawers sliding open, a person mid-distance in the
+  amenity spaces, never in the bedrooms.
+- **Amenity interiors count as interiors.** Lobby with a receptionist and
+  a chandelier, library with a rolling ladder or shelves spelling READ,
+  games room with a pool table and carrom boards under green dome pendants,
+  banquet hall with a golden tiered ceiling, kids room with a mural and a
+  ball pit, cinema with a star ceiling, yoga room with a circular cutout,
+  salon, spa tray with rolled towels, cafe counter with the project logo.
+- **Indian cues.** A pooja niche or mandir dressed with marigold garlands,
+  a Ganesha with a lamp and flowers, a jhoola in a shaded pavilion, jaali
+  and golden screens, brass and copper, lotus in a bowl.
+
 Contents
 1. Shot list by room
 2. Camera
@@ -46,8 +90,9 @@ Name: `LIVING_MORNING_01`, `MASTER_NIGHT_02`, and so on.
 - Physical camera, full-frame sensor, focal 18–24 mm for the hero, 24–28 mm
   for medium, 35–50 mm for vignettes. Do not go below 16 mm; ultra-wide
   stretches furniture and breaks the photographic feel Impact 3D relies on.
-- Height 1.1–1.5 m. Bedrooms and lounges 0.9–1.2 m so beds and sofas gain
-  presence. Kitchens 1.2–1.4 m to keep the counter as a horizontal band.
+- Height 1.1–1.5 m; the films sit at about 1.2 m for wides. Bedrooms and
+  lounges 0.9–1.2 m so beds and sofas gain presence. Kitchens 1.2–1.4 m to
+  keep the counter as a horizontal band. Close-ups drop to table height.
 - Two-point perspective. Tilt the camera to zero and use lens shift (Corona
   camera "vertical tilt correction" or VRayPhysicalCamera auto vertical
   tilt). Aerials are the only exception.

@@ -1,167 +1,225 @@
-# Cinematic walkthrough films — the IMPACT 3D playbook (new in v2)
+# Cinematic walkthrough films — the IMPACT 3D playbook (v2, rebuilt from the channel)
 
-The studio describes its films as "cinematic property films" and
-"conceptual documentary" presentations: the viewer should finish the film
-understanding the whole project and wanting the lifestyle it shows. Manji's
-three published tenets: camera work with finesse and a thoughtful camera
-strategy that highlights key features; background music as the heartbeat of
-the narrative; harmony in post-production between visuals, camera and music.
+Built from scene-by-scene analyses of 17 IMPACT 3D films (see
+`films-catalogue.md`) plus Manji Vagjiyani's published tenets: camera work
+with finesse and a camera strategy that highlights key features, music as
+the heartbeat, and harmony between visuals, camera and music in post. The
+studio calls these "cinematic property films" and "conceptual documentary"
+presentations: the viewer should finish understanding the whole project and
+wanting the lifestyle.
 
 Contents
-1. Film structure
-2. Shot vocabulary
-3. Shot durations and rhythm
-4. Camera moves in 3ds Max
-5. Lighting arc and scene states
-6. Motion in the environment
-7. Music and sound
-8. Edit and post
-9. Delivery specs and render budget
-10. Storyboard template
+1. Pick the film mode
+2. The arc (what every residential film does)
+3. Shot vocabulary the studio actually uses
+4. Durations and rhythm
+5. Camera moves in 3ds Max
+6. Lighting arc and scene states
+7. Motion in the environment and 3D people
+8. Music and sound
+9. Edit, transitions and credits
+10. Delivery specs and render budget
+11. Storyboard template (residential, 1:40)
 
 ---
 
-## 1. Film structure (60–150 s)
+## 1. Pick the film mode
 
-| Act | Content | Mood | Share |
-|---|---|---|---|
-| Opening | Title on black or on a slow aerial; location context (river, hills, city) | Early morning | 10 % |
-| Approach | Drive or walk toward the site; gate; landscape | Morning | 10 % |
-| Arrival | Entrance, foyer, first reveal of the main space | Late morning | 10 % |
-| Interior journey | Living → dining/kitchen → bedrooms → bathrooms → special rooms (pooja, theatre, gym) | Midday to afternoon | 35 % |
-| Outdoor life | Pool, deck, garden, terrace, amenities | Golden hour | 15 % |
-| Dusk reveal | The hero exterior as lights come on; interior glow | Blue hour | 10 % |
-| Night and closing | Night aerial or pool reflection; logo; credits | Moonlit night | 10 % |
+| Mode | When | Reference films | Length | Score |
+|---|---|---|---|---|
+| **Amenity tour** | towers, townships, anything with a clubhouse | VENETIAN, WESTERN MARINA, THE VARANDA, APARNA AQUA | 2:30–3:15 (2023) or 1:30–1:40 (2025+) | piano or acoustic guitar; electronic pulse for Hyderabad towers |
+| **Architect documentary** | when the architect will speak on camera | ANUTHAM, SUVARNABHOOMI | 3:00–3:30 | soft piano under voice |
+| **Landscape estate** | resorts, 100+ acre townships, villa enclaves | LE PARQUE (three cuts), Anaya | 2:45–4:30 | orchestral, or Indian fusion with diegetic sound |
+| **Interior-led** | a show flat or a 4 BHK product | Swati Crimson, Serenity Lavish | 2:00–3:00 | contemplative piano |
+| **Commercial** | offices, retail podiums | Swati CLOVER, TROGON | 1:30 | electronic 4/4 with synth pads |
+| **Lifestyle protagonist** | ultra-luxury, a brand story | THE CASCADES (2026) | 1:36 | ethereal vocals, foley, light leaks, slow motion |
+| **Day in the life** | smart-living or wellness positioning, a couple as protagonists | CENTURY MIRAI (Bangalore) | 3:30 | synth-pop, dense foley, floating feature overlays (workout data, charging, pool temperature) |
 
-The time of day advances through the film. Never cut from night back to
-noon; if a room needs daylight after the dusk reveal, place it earlier.
+Default for a new brief in 2026: amenity tour at 1:30–1:40, with one
+protagonist thread if the client wants it. Choose "day in the life" when
+the brief lists smart-home or wellness features; it runs sunrise (alarm,
+curtains, breakfast) → morning exercise → pool → dusk sports → club and
+dinner → night party → night aerial, and every feature gets a close-up plus
+a floating graphic.
 
-For apartment towers: replace "Approach" with a podium and amenity sequence
-and add a "view from the balcony" beat in the interior journey. For
-townships and resorts: extend "Outdoor life" and add a community or arrival
-sequence.
+## 2. The arc (what every residential film does)
 
-## 2. Shot vocabulary
+1. **Cold open on nature, 3–15 s.** Not the building. Macro palm frond,
+   dew on grass, a lotus with water drops, sun through leaves with a
+   starburst, a flock of birds across a hazy sun, tree reflections in still
+   water with a jogger crossing, or a misty sunrise aerial with god rays.
+2. **Title card.** White text on black, or on a light textured card.
+   Tagline optional ("Our Ambition Your Reality").
+3. **Building reveal.** Low-angle tilt-up framed by foliage, then the wide.
+4. **Arrival by car.** Aerial follow around a curve, rear track down a
+   palm-lined road, lateral track across a bridge over a lily pond, the car
+   turning in past the branded entrance wall in raking light, stopping at
+   the porch. A dark grey or black luxury sedan or SUV; in 2026, extreme
+   close-ups of the hood ornament, grille and a lit door handle.
+5. **Lobby.** Receptionist at the desk, one chandelier, a couple walking in.
+6. **Amenity inventory.** One frame per amenity, 3–4 s each: lounge,
+   library, gym, games room (pool table, carrom, chess), kids room, banquet
+   hall, cinema, yoga, salon, cafe, co-working, sports court, playground,
+   pool, cabanas. Insert a product close-up every four or five shots.
+7. **Home interiors.** Living toward the view, dining, kitchen, master
+   bedroom, balcony. One styled close-up per room.
+8. **Dusk.** Pool lit, balcony with candles or a drink, interior glow
+   through glass, the same plaza frame as daytime with the lights now on.
+9. **Night.** Facade with lit windows and people on balconies, fire pit,
+   string lights, mandir with marigolds, night aerial; optionally
+   searchlights, fireworks or a full moon.
+10. **Credits.** Project logo, developer, architect, landscape architect,
+    "A Film By IMPACT 3D", RERA number, disclaimer. Black or light-grey
+    card, silence or a single chime.
 
-- **Establishing aerial**: slow orbit or push-in, 8–12 s, 40–100 m altitude.
-- **Approach dolly**: camera at 1.4 m moving 0.5–1 m/s along the drive or
-  path, slight parallax from foreground planting.
-- **Reveal**: camera passes a doorway, column or jaali and the space opens;
-  the most used interior move.
-- **Slow push-in**: 24–28 mm, 0.2–0.4 m/s, toward a hero feature (staircase,
-  headboard wall, kitchen island).
-- **Lateral track**: parallel to a facade or a run of glazing, 0.3–0.6 m/s.
-- **Crane / rise**: from eye level to 4–6 m over the pool or garden.
-- **Detail rack focus**: 50–85 mm, f/2.8, focus pull from a prop to the
-  room, 3–4 s.
-- **Window connection**: start inside looking out, dolly through the open
-  door to outside.
-- **Static beauty frame**: 3–4 s hold of a still-quality frame; use it to
-  land a beat with the music.
+Never cut back to noon after dusk. If the architect speaks, open with them
+and return to them before the credits.
 
-No whip pans, no handheld shake, no fisheye. Motion is slow and continuous.
+## 3. Shot vocabulary the studio actually uses
 
-## 3. Shot durations and rhythm
+- **Tilt-up through trees**: low angle, foliage in the bottom corners,
+  clear sky, 3–4 s.
+- **Extreme low-angle straight up** at two or three towers.
+- **Top-down through the pendant**: camera above a ring or tiered
+  chandelier looking down at the dining or coffee table.
+- **Top-down into a spiral stair** or **from the tower roof into the lit
+  plaza**, slow zoom out.
+- **Through the screen**: a jaali, wood slats, palm leaves or a half-open
+  wooden door in the foreground, the subject beyond.
+- **Balcony looking in**: from outside through sliding glass, warm interior
+  against cool evening.
+- **Symmetrical reflection**: towers or a lap pool mirrored in still water.
+- **Water-level camera** across a pool toward umbrellas and loungers.
+- **Handheld follow** behind a walking couple with sun flare through leaves.
+- **Car tracking**: aerial, rear, lateral over a bridge, and a blur past a
+  numbered villa door.
+- **Day-to-dusk repeat**: the same plaza frame twice, lights off then on.
+- **Product close-up at shallow depth**: billiard rack, pillows, a towel
+  with the embroidered logo, spa bottles on a marble tray, a plate with the
+  project crest.
+- **Sun glint with birds**: facade reflecting the low sun as a flock
+  crosses.
+- **Rack-focus reveal**: room starts soft, resolves sharp (2026).
+- **Speed ramp** on a pour or a splash (2026 only).
+- **Human extreme close-up**: eyes opening, a hand tapping a clock, a
+  smartwatch, a straw in a cocktail (day-in-the-life and lifestyle modes).
 
-- Standard shot 4–6 s; aerial 8–12 s; detail 3–4 s.
-- Cut on the music: downbeats for reveals, phrases for act changes.
-- Vary move type across consecutive shots (push, then track, then rise).
-- Ease in and out on every camera key (Bezier, 15–20 % of the shot length).
-- ShotRunner durations: set each camera's shot length in frames at 25 fps
-  (5 s = 125 frames) and export per-camera `.vrscene` states.
+Static frames are still the majority; every move is slow and eased.
 
-## 4. Camera moves in 3ds Max
+## 4. Durations and rhythm
 
-- Physical camera with target; animate position on a path constraint for
-  dollies, target on a separate path for reveals.
-- Keep focal length constant within a shot; zoom is not a move the studio
-  uses.
-- Motion blur on for film (shutter 180°), off for the still frames pulled
-  from the film.
-- Use MaxDirector's storyboard flow: scout views → storyboard → plan →
-  build; feed it the act structure above as the brief, one act per request
-  to keep shots coherent.
-- Avoid passing through furniture or door swings; check every path at 1 m/s
-  in the viewport before rendering.
+- 3–5 s per shot; aerial openers 8–12 s; product close-ups 2–3 s.
+- A 1:36 film is 28–36 shots; a 2:45 film is 50–55; a 4:26 extended cut
+  is 60–65.
+- Cut on the downbeat for reveals and on phrase changes for act changes.
+- Alternate static and moving shots; never two aerials in a row except in
+  the opener.
+- ShotRunner: 25 fps, so 4 s = 100 frames per camera.
 
-## 5. Lighting arc and scene states
+## 5. Camera moves in 3ds Max
 
-Create one scene state per mood (`MORNING`, `MIDDAY`, `GOLDEN`, `BLUE`,
-`NIGHT`) with the sun, sky/HDRI, light groups and exposure stored. Every
-shot references one state. Transitions between states happen on cuts, not
-inside a shot, except for a single "lights come on" dusk timelapse (8–10 s)
-where interior and landscape groups animate from 0 to 100 % over the shot.
+- Physical camera with target. Dollies on a path constraint; reveals with
+  the target on its own path.
+- Constant focal length within a shot. Tilt-ups are camera rotation, not
+  zoom.
+- Ease in and out 15–20 % of the shot length.
+- Motion blur on for film; the stills pack is re-rendered with it off.
+- MaxDirector brief: hand it the arc in §2 one act at a time. Language that
+  matches the studio: "cold open on a macro palm frond with a starburst",
+  "tilt up the facade through trees", "aerial follow of a grey sedan round
+  the curve", "top-down through the ring pendant onto the dining table",
+  "balcony looking in at dusk", "night aerial with the entry road lit".
 
-Keep white balance per state identical between stills and film so marketing
-stills cut from the film match the rendered stills.
+## 6. Lighting arc and scene states
 
-## 6. Motion in the environment
+Scene states: `DAWN_MIST` (sunrise aerials, god rays, fog), `MORNING`
+(raking sun, long shadows), `MIDDAY` (sports and play only), `GOLDEN`,
+`BLUE`, `NIGHT`. Every shot references one state; transitions on cuts only,
+except the day-to-dusk repeat and a single "lights come on" timelapse.
 
-The studio uses simulation so "natural elements such as water and trees look
-alive". In production:
-- Trees and shrubs: Forest Pack animated (wind) or GrowFX/animated proxies;
-  amplitude low, period 4–8 s.
-- Grass: wind modifier on the lawn scatter, subtle.
-- Water: animated ripple normal maps or a Phoenix FD pool for hero pool
-  shots; fountain and infinity edge as particle or mesh sim.
-- Curtains: cloth sim with a gentle draft on interior reveals.
-- People: animated 3D people at distance (walking, sitting), never static
-  cutouts in film; cars moving at 20–30 km/h on drives.
-- Birds at dawn, ceiling fans turning, TV content playing, candle flicker
-  at night.
+Interiors in the film use the same LightMix groups as the stills so that
+the stills pack cuts from the film match the hero renders.
 
-## 7. Music and sound
+## 7. Motion in the environment and 3D people
 
-Music is chosen before the edit and drives the cut.
-- Genre: cinematic orchestral or ambient-piano with a build; for Indian
-  context a restrained fusion (sitar or bansuri motif over ambient pads) works
-  for resorts and villas; modern electronic-ambient for towers.
-- Structure: intro (0–15 s) quiet, build through the interior journey, peak
-  at the dusk reveal, resolve at night.
-- Sound design layer: birds in the morning, water at the pool, footsteps
-  and door slides on reveals, wind in trees, city hum for urban aerials,
-  crickets at night. Keep it 12–18 dB under the music.
-- Licensing: only licensed or original tracks; keep the licence in the
-  project folder.
+- Trees and grass: wind on Forest Pack and GrowFX, low amplitude.
+- Water: Phoenix FD for the hero pool, fountains and waterfall walls;
+  animated ripple normals elsewhere. Sprinklers and dew are used as opening
+  imagery.
+- People: Anima (or equivalent) crowds from 2020 on. A couple walking
+  through the film, a father and child, joggers, players on courts, women
+  meditating, staff behind counters, kids in the playroom. Mid-distance,
+  never looking at the camera, dressed in plain light colours. In 2026 a
+  single protagonist may appear in medium close-up.
+- Cars: one luxury sedan or SUV doing the arrival; a second car parked at
+  the villa. Cars move at 15–25 km/h.
+- Small mechanical life: kitchen drawers sliding open, a ceiling fan, a
+  revolving door, steam from a pot, a lit door handle, birds crossing.
 
-## 8. Edit and post
+## 8. Music and sound
 
-- Assemble to the music first with grey placeholder frames, then swap in
-  renders; this is how the studio reaches "harmony" between visuals, camera
-  and music.
-- Grade per scene state, then a film-wide LUT; match to the stills' LUT.
-- Transitions: straight cuts and slow dissolves only; one long dissolve is
-  allowed at the dusk timelapse.
-- Titles: project name, architect, location; clean sans-serif; no motion
-  graphics gimmicks. Studio card at the end.
-- Export a stills pack: 6–10 frames pulled from the film at full quality
-  with motion blur off.
+- Residential: soft piano with light strings (2018–2020), acoustic guitar
+  fingerpicking with string pads (2023), minimal ambient piano and pads
+  (2025), ethereal female vocals over synth (2026).
+- Indian-fusion alternative: flute and sitar over percussion; the studio
+  has delivered the same film with two scores, so offer an alternate-score
+  cut.
+- Commercial: electronic pulse, four-on-the-floor, synth pads.
+- Diegetic layer (2023 on): birds at dawn, water at the pool, car engine
+  and door, children laughing, a tennis hit, a ceiling fan, crickets and a
+  fire crackle at night, a single water-drop, a champagne pour. Keep it
+  12–18 dB under the music.
+- Architect voice-over when available, with the music ducked.
+- Silence or one chime over the credit cards.
 
-## 9. Delivery specs and render budget
+## 9. Edit, transitions and credits
 
-- 3840 × 2160, 25 fps, 60–150 s; also a 1080 × 1920 vertical cut (30–45 s)
-  for Instagram Reels, re-framed from wider renders (render at 3840 × 2160
-  with safe margins, not a separate pass).
-- Corona: noise limit 4–5 % with denoise for animation, anti-flicker on
-  (UHD cache "animation" preset). V-Ray/Vantage via ShotRunner: samples or
-  noise threshold per shot; success is fresh frames on disk, not the exit
-  code.
-- Budget: 25 fps × 120 s = 3000 frames. At 2–4 min/frame on a GPU render
-  node that is 100–200 node-hours; Vantage cuts it to minutes per shot at
-  the cost of some material fidelity, so use Vantage for the interior
-  journey and full V-Ray/Corona for the hero exteriors and dusk reveal.
-- Deliver H.264 (high bitrate) plus ProRes 422 master from the editing
-  application; Vantage does not write MOV or ProRes itself.
+- Assemble to the music with placeholders, then swap in renders.
+- Straight cuts; a slow dissolve only at the dusk timelapse. In the
+  lifestyle mode, yellow light leaks and golden bokeh are used as
+  transitions between beats.
+- Grade per scene state, then a film-wide LUT that matches the stills.
+- Credit conventions observed: title card at the start with the product
+  line ("3 & 4 BHK HOMES AND PENTHOUSES", "4 BHK CONTEMPORARY LIVING");
+  end cards with developer logos, architect, landscape architect,
+  "Visual by IMPACT 3D" or "A Film By IMPACT 3D" with the URL, RERA number
+  and a disclaimer.
 
-## 10. Storyboard template
+## 10. Delivery specs and render budget
+
+- 3840 × 2160, 25 fps, 1:30–1:40 for 2026 briefs (2:30–3:15 if the
+  client wants the full amenity inventory); plus a 1080 × 1920 vertical
+  cut of 30–45 s and a stills pack of 6–10 frames.
+- Corona: noise limit 4–5 % with denoise, anti-flicker UHD cache. V-Ray and
+  Vantage via ShotRunner: success is fresh frames on disk. Vantage for the
+  interior amenity run, full renderer for the nature opener, the arrival,
+  the dusk reveal and the night aerial.
+- A 1:36 film at 25 fps is 2400 frames; budget 60–120 node-hours on GPU
+  with Vantage taking half the shots.
+- H.264 delivery plus a ProRes master from the editor.
+
+## 11. Storyboard template (residential, 1:40)
 
 ```
-SHOT  ACT        SPACE/LOCATION      MOVE            LENS  DUR  STATE   NOTE
-01    Opening    Aerial over site    slow orbit      28    10s  MORNING title over
-02    Approach   Drive to gate       dolly forward   24    6s   MORNING frangipani foreground
-03    Arrival    Foyer               reveal          20    5s   MORNING door opens
-04    Interior   Living → pool view  push-in         22    6s   MIDDAY  jaali shadow
-...
-14    Dusk       Front facade        static → lights timelapse 28 10s GOLDEN→BLUE lights come on
-15    Night      Pool reflection     lateral track   35    6s   NIGHT   logo
+SHOT ACT       CONTENT                                   MOVE            LENS DUR STATE
+01   Open      macro palm frond, starburst through fronds  static          85   4s  MORNING
+02   Open      tree reflections in still water, jogger     static          50   5s  MORNING
+03   Title     project name + product line on black        -               -    3s  -
+04   Reveal    tilt up facade through trees                tilt            24   4s  MORNING
+05   Reveal    extreme low angle at 3 towers               static          16   3s  MIDDAY
+06   Arrival   aerial follow grey sedan round the curve    aerial track    35   5s  GOLDEN
+07   Arrival   rear track down palm-lined road             track           28   4s  GOLDEN
+08   Arrival   entrance wall logo in raking light, car in  static          50   3s  GOLDEN
+09   Lobby     couple through glass doors, chandelier      static          24   4s  GOLDEN
+10-19 Amenity  pool cabanas POV track, lap pool symmetric, gym, games room + billiard rack CU, kids room, library, yoga, banquet, cafe table CU  3-4s each
+20   Home      living toward the pool view                 static          22   4s  MIDDAY
+21   Home      top-down through ring pendant, dining       static          35   3s  MIDDAY
+22   Home      kitchen island, pancakes, steam             dolly in        24   4s  MIDDAY
+23   Home      master bedroom pan, sheer curtains          pan             24   4s  GOLDEN
+24   Dusk      balcony looking in, candles                 static          28   4s  BLUE
+25   Dusk      pool lit, three waterfalls, bougainvillea   static          24   4s  BLUE
+26   Night     facade with lit balconies and people        static          35   4s  NIGHT
+27   Night     fire pit, pergola lounge                    static          28   3s  NIGHT
+28   Night     aerial, entry road lit, city grid           aerial pull     28   6s  NIGHT
+29   Credits   logo, developer, architect, RERA, IMPACT 3D -               -    8s  -
 ```

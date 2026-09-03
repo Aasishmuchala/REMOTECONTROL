@@ -8,7 +8,8 @@ description: |
   offices, showrooms) and CINEMATIC WALKTHROUGH FILMS. Covers camera, time-of-day
   lighting narrative, Corona/V-Ray render setup, material realism, Forest Pack
   environments, Indian architectural context, staging, post-production, and
-  briefs for the Sthyra pipeline (MaxDirector, MaxGaffer, MatForge, ShotRunner).
+  briefs for the Sthyra pipeline (MaxDirector, MaxGaffer, MatForge, ShotRunner),
+  grounded in a shot-by-shot catalogue of 17 films from the studio's channel.
   Use this skill whenever the user mentions Impact 3D, Manji Vagjiyani, Impact
   Design Studio, archviz, architectural rendering, exterior or interior render,
   villa/bungalow/apartment visualization, 3D walkthrough, property film, Corona
@@ -35,11 +36,15 @@ Reproduce the look, storytelling and production discipline of IMPACT 3D
 of this skill covered exteriors only. Version 2 adds a full **interiors**
 playbook, a **cinematic film** playbook, and the bridge into the Sthyra tools.
 
-Ground truth comes from the studio's published breakdowns (Chaos Corona blog
-interview "Mastering the art of archviz", the Autodesk AREA "Making of
-VERANTES", the ANUTHAM / VENETIAN / LE PARQUE / Meraki Hills project pages)
-and its YouTube output. See `references/sources.md` for the catalogue and for
-what could not be verified directly.
+Ground truth comes from two places. First, shot-by-shot analyses of 17
+films on the studio's YouTube channel (@manjivagjiyani is the IMPACT 3D
+channel): ANUTHAM, VENETIAN, THE VARANDA, WESTERN MARINA, APARNA AQUA,
+SUVARNABHOOMI, LE PARQUE (three cuts), Anaya, Swati Crimson, Serenity
+Lavish, Swati CLOVER, TROGON, Center Court, THE CASCADES and CENTURY MIRAI;
+see
+`references/films-catalogue.md`. Second, the studio's published breakdowns
+(Chaos Corona blog interview, Autodesk AREA "Making of VERANTES", project
+pages). `references/sources.md` lists both and what could not be verified.
 
 ## 1. Route first
 
@@ -51,6 +56,7 @@ what could not be verified directly.
 | Both exterior and interior of one project | all three | one project bible; keep one time-of-day arc across shots |
 | Image-gen prompt only (Higgsfield, Flux, gpt-image) | §4 of the relevant reference | prompt block from `assets/brief-template.md` §5 |
 | Brief for MaxDirector / MaxGaffer / MatForge / ShotRunner | §6 below + `assets/brief-template.md` | filled template |
+| "What does an Impact 3D film look like?", reference a specific project, match a specific shot | `references/films-catalogue.md` | the pattern list or the film entry, with video id |
 
 Ask only if the answer changes the deliverable: project type, room list, which
 times of day, aspect ratio and channel (Instagram 4:5, brochure 3:2, film 16:9).
@@ -62,10 +68,13 @@ early evening, moonlit night), 3:2 stills at 4000 px, 16:9 4K film.
 1. **Story before pixels.** Every image answers "what is it like to live here?"
    Pick a moment, a season, a person's activity, then compose for that. Manji's
    own framing: the goal is "a conceptual documentary" that helps the viewer
-   "visualize a lifestyle".
+   "visualize a lifestyle". In the films this means a cold open on nature,
+   an arrival by car, and one life detail in every interior frame.
 2. **Time-of-day is the narrative device.** Present the same space at **early
    morning**, **early evening (golden/blue hour)** and **moonlit night** so the
-   viewer sees how the architecture changes. Never deliver only noon.
+   viewer sees how the architecture changes. Every film runs dawn to night and
+   ends at night; the same plaza is shown by day and again as the lights come
+   on. Never deliver only noon.
 3. **Material realism is non-negotiable.** "Every surface texture and material
    should feel as naturally realistic as possible": micro-roughness variation,
    edge wear, correct IOR, real-world texture scale, no plastic sheen.
@@ -80,6 +89,9 @@ early evening, moonlit night), 3:2 stills at 4000 px, 16:9 4K film.
 6. **Camera highlights key features and connections.** Compositions show the
    relationship between indoor and outdoor: the living room framing the pool,
    the courtyard seen through the jaali, the terrace looking back at the city.
+   Signature frames: tilt-up through trees, top-down through the pendant,
+   through a screen or half-open door, balcony looking in at dusk, a
+   symmetrical reflection in still water, a product close-up at shallow depth.
 7. **Film = visuals + camera + music in unison.** Camera work with "finesse",
    music as the "heartbeat", and harmony in post. No shot exists without a
    reason in the edit.
@@ -171,6 +183,10 @@ Translate rather than approximate:
       distance with correct scale.
 - [ ] Set-wide grade is consistent: same LUT, same white balance logic per
       mood, same vignette strength.
+- [ ] Every interior frame has one styled close-up object group and one
+      life cue (steam, a drink, an open book, a fan, a person mid-distance).
+- [ ] Films: cold open on nature, arrival by car, dusk repeat of a daytime
+      frame, night finale, credits with architect and RERA.
 - [ ] Shot names follow `SPACE_MOOD_NN`; deliverables listed with resolution.
 
 ## 8. Files in this skill
@@ -178,8 +194,11 @@ Translate rather than approximate:
 - `references/exteriors.md` — facades, aerials, landscape, night exteriors.
 - `references/interiors.md` — room-by-room playbook, LightMix, staging,
   Indian interior vocabulary (new in v2).
-- `references/cinematic-films.md` — walkthrough structure, camera moves,
-  music and edit, delivery specs (new in v2).
+- `references/cinematic-films.md` — film modes, the arc every film follows,
+  shot vocabulary, music and sound, delivery specs (rebuilt in v2 from the
+  channel).
+- `references/films-catalogue.md` — 17 films analysed shot by shot, cross-film
+  patterns, the 2018 to 2026 evolution, video ids (new in v2).
 - `references/sources.md` — channel and article catalogue, project list,
   verification caveats.
 - `assets/brief-template.md` — fill-in brief for stills, films and image-gen
