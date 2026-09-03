@@ -1,8 +1,9 @@
 ---
-name: impact-3d
+name: impact-3d-2-0
 description: |
-  Art-direct and produce architectural visualization in the style of IMPACT 3D
-  (Impact Design Studio, Ahmedabad — Manji Vagjiyani, 3ds Max + Chaos Corona):
+  IMPACT 3D 2.0. Art-direct, produce and review architectural visualization
+  in the style of IMPACT 3D (Impact Design Studio, Ahmedabad — Manji
+  Vagjiyani, 3ds Max + Chaos Corona):
   EXTERIORS (villas, bungalows, apartment towers, resorts, townships),
   INTERIORS (living rooms, bedrooms, kitchens, bathrooms, lobbies, pooja rooms,
   offices, showrooms) and CINEMATIC WALKTHROUGH FILMS. Covers camera, time-of-day
@@ -13,15 +14,19 @@ description: |
   with a V-Ray 7 (2026) render, material and VFB grade spec, Nano Banana
   Pro as the default model for generated concept images and Seedance 2.0
   as the default model for generated walkthrough clips.
-  Use this skill whenever the user mentions Impact 3D, Manji Vagjiyani, Impact
-  Design Studio, archviz, architectural rendering, exterior or interior render,
+  Also reviews an existing walkthrough film against the studio's arc and
+  quality bar. Use this skill whenever the user mentions Impact 3D, Impact
+  3D 2.0, Manji Vagjiyani, Impact Design Studio, archviz, architectural rendering, exterior or interior render,
   villa/bungalow/apartment visualization, 3D walkthrough, property film, Corona
-  render, "make it look like Impact 3D", or wants render briefs, lighting specs,
+  render, "make it look like Impact 3D", "check my walkthrough", or wants render briefs, lighting specs,
   material lists, shot lists, or image- and video-generation prompts for
   architecture —
   even if they only say "render this house" or "render this room".
 triggers:
   - "impact 3d"
+  - "impact 3d 2.0"
+  - "property film"
+  - "check my walkthrough"
   - "manji"
   - "archviz"
   - "architectural visualization"
@@ -33,12 +38,21 @@ triggers:
   - "3ds max render"
 ---
 
-# IMPACT 3D — Archviz Art Direction (v2: exteriors + interiors + films)
+# IMPACT 3D 2.0 — Archviz Art Direction (exteriors, interiors, films, generated media)
 
 Reproduce the look, storytelling and production discipline of IMPACT 3D
-(Impact Design Studio, Ahmedabad, est. 2010, owner Manji Vagjiyani). Version 1
-of this skill covered exteriors only. Version 2 adds a full **interiors**
-playbook, a **cinematic film** playbook, and the bridge into the Sthyra tools.
+(Impact Design Studio, Ahmedabad, est. 2010, owner Manji Vagjiyani).
+
+What 2.0 contains, on top of the exterior-only first version:
+- **Interiors** playbook, room by room, with LightMix groups and staging.
+- **Cinematic films** playbook rebuilt from 17 studio films, plus a
+  shot-by-shot catalogue with video ids.
+- **V-Ray 7 (2026)** render, material and VFB grade spec aligned with the
+  Sthyra tools (MaxDirector, MaxGaffer, MatForge, ShotRunner).
+- **Generated media**: Nano Banana Pro for stills, Seedance 2.0 for clips,
+  and a creative film playbook with a project bible and written-out films.
+- **Film review**: score an existing walkthrough against the studio's arc
+  and quality bar (§8).
 
 Ground truth comes from two places. First, shot-by-shot analyses of 17
 films on the studio's YouTube channel (@manjivagjiyani is the IMPACT 3D
@@ -62,6 +76,7 @@ pages). `references/sources.md` lists both and what could not be verified.
 | Video-gen prompt only (animate a frame, walkthrough clip, day-to-dusk clip) | §7 below, then `references/cinematic-films.md` §12 | per-shot clip prompts from `assets/brief-template.md` §6 |
 | "Make an Impact 3D style video" with Seedance 2.0 (whole film, previs, no 3ds Max scene) | `references/seedance-films.md` | project bible, beat list, film blueprint and a Seedance prompt per clip |
 | Brief for MaxDirector / MaxGaffer / MatForge / ShotRunner | §6 below + `assets/brief-template.md` | filled template |
+| "Check my walkthrough" / review an existing film or edit | §8 below, `references/cinematic-films.md` §2–§4 | scorecard + fix list in the studio's language |
 | "What does an Impact 3D film look like?", reference a specific project, match a specific shot | `references/films-catalogue.md` | the pattern list or the film entry, with video id |
 | V-Ray render settings, VRayMtl recipes, VFB grade, texture standards, Chaos Scatter, splats, parallax interiors | `references/vray-quality.md` | settings block + material table rows + grade preset |
 
@@ -130,7 +145,7 @@ Run these steps for any deliverable; the references specialise each step.
 8. **Post** — VFB2 layers (exposure, highlight burn, filmic/ACES, LUT,
    bloom, glare, CA, vignette) saved as a preset per mood
    (`references/vray-quality.md` §8), then a set-wide pass for consistency.
-9. **QA** — run §7 checklist, then deliver with shot names and mood tags.
+9. **QA** — run §9 checklist, then deliver with shot names and mood tags.
 
 ## 4. Exterior vs interior at a glance
 
@@ -247,7 +262,33 @@ Seedance 2.0 rules:
 - People at mid-distance only, never facing camera; a protagonist
   close-up needs a Nano Banana Pro reference of the same person.
 
-## 8. QA checklist before delivery
+## 8. Review an existing film
+
+When the user hands over a walkthrough (a .mov, an export, a YouTube
+link), get a scene list first: a server-side video analysis if the file
+is reachable, otherwise the user's own shot list with timings. Local
+paths on the user's machine are not readable from a cloud session; ask
+for an unlisted YouTube link or a share link. Then score it:
+
+| Check | Studio bar (`references/cinematic-films.md`) | Pass if |
+|---|---|---|
+| Cold open | nature, water, light or a person before the building | first 3–15 s show no facade |
+| Arc | reveal → arrival → lobby → amenities → home → dusk → night → credits | order holds, no noon after dusk |
+| Rhythm | 3–5 s per shot, 8–12 s aerials, cut on the downbeat | median shot in range, cuts on beats |
+| Camera | static majority, slow eased moves, one move per shot | no whip pans, no zooms, no double moves |
+| Light arc | MORNING/GOLDEN outside, BLUE for dusk, NIGHT to close | every act has a state; film ends at night |
+| Warm/cool | warm interiors against cool exteriors from dusk on | dusk and night frames read warm-in, cool-out |
+| Life | one life detail per interior frame, people mid-distance | no empty rooms, nobody facing camera |
+| Materials | roughness variation, no plastic, no mirror glass | hero surfaces pass the material lines in §9 |
+| Sound | one score, diegetic layer 12–18 dB under, silence on credits | score does not change mid-film |
+| Brand | logo wall, towel, plate; credits with architect and RERA | present and legible, not baked into renders |
+
+Deliver a scorecard (pass, weak, missing per row), the three fixes with
+the biggest effect first, and, if the film is to be regenerated, the
+Seedance 2.0 clip prompts for the shots that fail
+(`references/seedance-films.md`).
+
+## 9. QA checklist before delivery
 
 - [ ] Every space has at least one morning, one evening and one night frame
       (or the user explicitly chose fewer moods).
@@ -277,24 +318,24 @@ Seedance 2.0 rules:
       text, native audio off or scored to the film's track.
 - [ ] Shot names follow `SPACE_MOOD_NN`; deliverables listed with resolution.
 
-## 9. Files in this skill
+## 10. Files in this skill
 
 - `references/exteriors.md` — facades, aerials, landscape, night exteriors.
 - `references/interiors.md` — room-by-room playbook, LightMix, staging,
-  Indian interior vocabulary (new in v2).
+  Indian interior vocabulary (2.0).
 - `references/cinematic-films.md` — film modes, the arc every film follows,
   shot vocabulary, music and sound, delivery specs, Seedance 2.0 clip
-  recipes (rebuilt in v2 from the channel).
+  recipes (2.0, rebuilt from the channel).
 - `references/films-catalogue.md` — 17 films analysed shot by shot, cross-film
-  patterns, the 2018 to 2026 evolution, video ids (new in v2).
+  patterns, the 2018 to 2026 evolution, video ids (2.0).
 - `references/seedance-films.md` — Impact 3D style films made with
   Seedance 2.0: project bible, creative DNA as prompt language, beat bank,
   blueprints per mode, two fully written films, music, transitions,
-  vertical cut, creative rules (new in v2).
+  vertical cut, creative rules (2.0).
 - `references/vray-quality.md` — V-Ray 7 (2026) render settings, lighting,
   VRayMtl rules and MatForge-aligned material recipes, texture standards,
   vegetation and context, VFB2 grade, render elements, quality gates,
-  briefing phrasebook (new in v2).
+  briefing phrasebook (2.0).
 - `references/sources.md` — channel and article catalogue, project list,
   verification caveats.
 - `assets/brief-template.md` — fill-in brief for stills, films, image-gen
