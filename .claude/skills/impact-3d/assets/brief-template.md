@@ -41,13 +41,18 @@ Lawn_grass           foliage     2K   no     Forest Pack, 3 variants
 ```
 
 ## 5. Image-generation prompt (when no 3ds Max render is planned)
-"Photorealistic architectural [interior|exterior] photograph, [space or
-facade] of a contemporary [villa|apartment|resort] in [city], India, [mood
-sentence], [materials], [staging or landscape], [indoor-outdoor
-connection], [lens mm] full-frame, corrected verticals, Chaos Corona render
-quality, subtle bloom and glare, filmic grade, [aspect]".
+Model: [gpt-image-2 | Nano Banana 2 | Flux 2 | Higgsfield photoreal]
+"Photorealistic architectural [interior|exterior] photograph, V-Ray 7
+render quality, [space or facade] of a contemporary [villa|apartment|
+resort] in [city], India. [Camera: mm, height, perspective, aperture,
+aspect]. [Light: one mood sentence]. [Materials with finish words:
+honed, brushed, satin, lacquered, weathered]. [Staging or landscape and
+one life cue]. [Indoor-outdoor connection]. Physically based materials,
+global illumination, subtle bloom and glare, filmic ACES grade, natural
+colour."
 Negative: fisheye, HDR halo, oversaturated, empty rooms, cloned trees,
-flat noon light, floating furniture.
+flat noon light, floating furniture, duplicated objects, text, watermark.
+References: "layout of @image1, materials of @image2, light of @image3".
 
 ## 6. Film (give to MaxDirector as acts, then ShotRunner for durations)
 - Length / fps / aspect:

@@ -9,7 +9,8 @@ description: |
   lighting narrative, Corona/V-Ray render setup, material realism, Forest Pack
   environments, Indian architectural context, staging, post-production, and
   briefs for the Sthyra pipeline (MaxDirector, MaxGaffer, MatForge, ShotRunner),
-  grounded in a shot-by-shot catalogue of 17 films from the studio's channel.
+  grounded in a shot-by-shot catalogue of 17 films from the studio's channel,
+  with a V-Ray 7 (2026) render, material and VFB grade spec.
   Use this skill whenever the user mentions Impact 3D, Manji Vagjiyani, Impact
   Design Studio, archviz, architectural rendering, exterior or interior render,
   villa/bungalow/apartment visualization, 3D walkthrough, property film, Corona
@@ -57,6 +58,7 @@ pages). `references/sources.md` lists both and what could not be verified.
 | Image-gen prompt only (Higgsfield, Flux, gpt-image) | §4 of the relevant reference | prompt block from `assets/brief-template.md` §5 |
 | Brief for MaxDirector / MaxGaffer / MatForge / ShotRunner | §6 below + `assets/brief-template.md` | filled template |
 | "What does an Impact 3D film look like?", reference a specific project, match a specific shot | `references/films-catalogue.md` | the pattern list or the film entry, with video id |
+| V-Ray render settings, VRayMtl recipes, VFB grade, texture standards, Chaos Scatter, splats, parallax interiors | `references/vray-quality.md` | settings block + material table rows + grade preset |
 
 Ask only if the answer changes the deliverable: project type, room list, which
 times of day, aspect ratio and channel (Instagram 4:5, brochure 3:2, film 16:9).
@@ -111,13 +113,18 @@ Run these steps for any deliverable; the references specialise each step.
    cameras before lighting.
 4. **Lighting** — sun/sky or HDRI for the mood, then practicals in named light
    groups (LightMix in Corona, Light Mix in V-Ray). Exposure set per camera.
-5. **Materials** — PBR from reference, scale-checked, roughness variation,
-   displacement where the eye lands (rugs, stone, lawns, brick).
+5. **Materials** — VRayMtl in roughness mode with Fresnel and metalness,
+   roughness variation on every surface, coat/sheen/translucency where the
+   class needs it, displacement or Enmesh where the eye lands; recipes and
+   texture standards in `references/vray-quality.md` §4–6.
 6. **Environment and staging** — scatter, water, entourage, props with a story.
-7. **Render** — Corona: noise limit 2–3 %, denoise 0.65, LUT on, bloom/glare
-   on; or V-Ray 7 / Vantage through ShotRunner. Test at 1/4 res per mood first.
-8. **Post** — Corona VFB / Lightroom / Photoshop: per-mood grade, glare, CA,
-   vignette, then a set-wide pass for consistency.
+7. **Render** — V-Ray 7 progressive, noise threshold 0.005 hero, denoiser
+   element blended in comp, ACEScg colour management, Light Mix groups
+   (`references/vray-quality.md` §1–3, §9). Corona equivalents: noise limit
+   2–3 %, denoise 0.65. Test at 1/4 res per mood first.
+8. **Post** — VFB2 layers (exposure, highlight burn, filmic/ACES, LUT,
+   bloom, glare, CA, vignette) saved as a preset per mood
+   (`references/vray-quality.md` §8), then a set-wide pass for consistency.
 9. **QA** — run §7 checklist, then deliver with shot names and mood tags.
 
 ## 4. Exterior vs interior at a glance
@@ -133,10 +140,15 @@ Run these steps for any deliverable; the references specialise each step.
 | Exposure (Corona EV) | −1 to +1 day; −4 to −6 night | +1 to +3 day; −1 to +1 evening; −2 to −4 night |
 | Post emphasis | Atmosphere, haze, sky grade | Warmth, contrast in shadows, highlight roll-off |
 
-## 5. Corona ↔ V-Ray translation (for the Sthyra pipeline)
+## 5. V-Ray 7 (2026) is the production renderer
 
-Impact 3D renders in Chaos Corona. The Sthyra tools target V-Ray 7 + Vantage.
-Translate rather than approximate:
+Impact 3D renders in Chaos Corona; the Sthyra tools target V-Ray 7 on
+3ds Max 2026 with Vantage 3. Read `references/vray-quality.md` for the
+full spec: ACEScg colour setup, render settings, lighting with Luminaires
+and Night Sky, the VRayMtl rules, a MatForge-aligned recipe table for
+every material class, texture standards, Chaos Scatter, Gaussian-splat
+context, parallax interiors, the VFB2 grade recipe, render elements and
+quality gates. Use this translation only when reading Corona advice:
 
 | Corona | V-Ray 7 | Note |
 |---|---|---|
@@ -170,7 +182,10 @@ Translate rather than approximate:
 - [ ] Every space has at least one morning, one evening and one night frame
       (or the user explicitly chose fewer moods).
 - [ ] Verticals are corrected (no keystoning) unless the shot is an aerial.
-- [ ] No material reads as plastic; roughness varies across each surface.
+- [ ] No material reads as plastic; every VRayMtl is in roughness mode with
+      a roughness map or variation, coat/sheen where the class needs it.
+- [ ] ACEScg colour management confirmed; colour maps sRGB, data maps raw;
+      noise threshold reached and denoiser blended, no fireflies.
 - [ ] Texture scale checked against a known object (door 2.1 m, brick 230 mm,
       tile 600 mm).
 - [ ] Vegetation has at least three species and size variation; no cloned
@@ -199,6 +214,10 @@ Translate rather than approximate:
   channel).
 - `references/films-catalogue.md` — 17 films analysed shot by shot, cross-film
   patterns, the 2018 to 2026 evolution, video ids (new in v2).
+- `references/vray-quality.md` — V-Ray 7 (2026) render settings, lighting,
+  VRayMtl rules and MatForge-aligned material recipes, texture standards,
+  vegetation and context, VFB2 grade, render elements, quality gates,
+  briefing phrasebook (new in v2).
 - `references/sources.md` — channel and article catalogue, project list,
   verification caveats.
 - `assets/brief-template.md` — fill-in brief for stills, films and image-gen

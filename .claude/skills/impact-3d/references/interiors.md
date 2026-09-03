@@ -278,16 +278,42 @@ Order: Corona VFB (or VFB layers) → Lightroom/Camera Raw → Photoshop.
 - Different LUTs or white balance logic across rooms in one set.
 - Saturated colour everywhere instead of one accent.
 
-## 10. Image-generation prompt pattern
+## 10. Image-generation prompt pattern (2026)
 
 Use when the deliverable is a concept image rather than a 3ds Max render.
+Pick the model first: a photoreal model (gpt-image-2, Nano Banana 2,
+Flux 2, or Higgsfield's photoreal preset) for interiors; stylised models
+only for mood boards. Then write the prompt in this order, as full
+sentences, not keyword soup:
 
-"Photorealistic architectural interior photograph, [room] in a contemporary
-Indian villa in Ahmedabad, [mood: early morning sun raking across the
-floor / dusk with warm cove and lamp light against a blue-hour garden view /
-night with layered warm practicals], [materials: Italian marble floor, teak
-veneer wall, brass fittings, linen sofa], [staging: ...], floor-to-ceiling
-glazing opening to a landscaped garden and pool, jaali screen casting
-patterned light, two-point perspective, 24 mm full-frame, f/8, corrected
-verticals, Chaos Corona render quality, subtle bloom and glare, filmic
-grade, 3:2".
+1. **Frame**: "Photorealistic architectural interior photograph,
+   V-Ray 7 render quality, [room] in a contemporary Indian villa in
+   Ahmedabad."
+2. **Camera**: "24 mm full-frame at 1.2 m, two-point perspective with
+   corrected verticals, f/8, ISO 100, 3:2."
+3. **Light**: one mood sentence. Morning: "low sun raking across the
+   floor through sheer curtains, cool blue-white shadows, no artificial
+   lights." Evening: "warm 2700 K cove and lamp light against a blue-hour
+   garden seen through floor-to-ceiling glass." Night: "layered warm
+   practicals, dark blue window, glossy floor reflections."
+4. **Materials, named with their finish**: "honed Statuario marble
+   floor with soft veining and subtle roughness variation, teak veneer
+   wall with visible grain, brushed brass fittings with fingerprints,
+   linen sofa with fabric sheen, sheer curtains with folds." Finish
+   words (honed, brushed, satin, lacquered, weathered) do more than
+   adjectives like luxurious.
+5. **Staging**: one styled object group and one life cue: "coffee
+   table with three books and a succulent, steam rising from a cup."
+6. **Indoor-outdoor**: "glazing opening to a landscaped garden and
+   pool, jaali screen casting patterned light."
+7. **Render anchors**: "physically based materials, global
+   illumination, soft contact shadows, subtle bloom and glare, filmic
+   ACES grade, natural colour, no HDR halo."
+8. **Negatives** (where the model takes them): "no fisheye, no
+   oversaturation, no floating furniture, no duplicated objects, no
+   text, no watermark, no cartoon."
+
+With reference images, compose instead of describing: "same room layout
+as @image1, materials from @image2, lighting mood of @image3". Generate
+the still, upscale, then animate with a minimal motion prompt ("slow
+push-in, curtain moving in a breeze") if a clip is needed.
