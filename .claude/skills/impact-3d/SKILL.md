@@ -10,13 +10,15 @@ description: |
   environments, Indian architectural context, staging, post-production, and
   briefs for the Sthyra pipeline (MaxDirector, MaxGaffer, MatForge, ShotRunner),
   grounded in a shot-by-shot catalogue of 17 films from the studio's channel,
-  with a V-Ray 7 (2026) render, material and VFB grade spec and Nano Banana
-  Pro as the default model for generated concept images.
+  with a V-Ray 7 (2026) render, material and VFB grade spec, Nano Banana
+  Pro as the default model for generated concept images and Seedance 2.0
+  as the default model for generated walkthrough clips.
   Use this skill whenever the user mentions Impact 3D, Manji Vagjiyani, Impact
   Design Studio, archviz, architectural rendering, exterior or interior render,
   villa/bungalow/apartment visualization, 3D walkthrough, property film, Corona
   render, "make it look like Impact 3D", or wants render briefs, lighting specs,
-  material lists, shot lists, or image-generation prompts for architecture —
+  material lists, shot lists, or image- and video-generation prompts for
+  architecture —
   even if they only say "render this house" or "render this room".
 triggers:
   - "impact 3d"
@@ -57,6 +59,7 @@ pages). `references/sources.md` lists both and what could not be verified.
 | Walkthrough / property film / animation | `references/cinematic-films.md` | storyboard + shot durations + music/sound brief + edit plan |
 | Both exterior and interior of one project | all three | one project bible; keep one time-of-day arc across shots |
 | Image-gen prompt only (concept image, relight, image-to-image polish) | §7 below, then §10/§11 of the relevant reference | model choice + prompt block from `assets/brief-template.md` §5 |
+| Video-gen prompt only (animate a frame, walkthrough clip, day-to-dusk clip, previs film) | §7 below, then `references/cinematic-films.md` §12 | per-shot clip prompts from `assets/brief-template.md` §6 |
 | Brief for MaxDirector / MaxGaffer / MatForge / ShotRunner | §6 below + `assets/brief-template.md` | filled template |
 | "What does an Impact 3D film look like?", reference a specific project, match a specific shot | `references/films-catalogue.md` | the pattern list or the film entry, with video id |
 | V-Ray render settings, VRayMtl recipes, VFB grade, texture standards, Chaos Scatter, splats, parallax interiors | `references/vray-quality.md` | settings block + material table rows + grade preset |
@@ -178,7 +181,7 @@ quality gates. Use this translation only when reading Corona advice:
 - **ShotRunner** (Vantage batch): each camera becomes a timed shot; set
   durations from `references/cinematic-films.md` §3.
 
-## 7. Model choice for generated images (2026)
+## 7. Model choice for generated images and clips (2026)
 
 Default: **Nano Banana Pro** (Gemini 3 Pro Image) for every arch viz
 concept image, relight, plan-or-sketch-to-render and image-to-image polish
@@ -205,6 +208,40 @@ Nano Banana Pro rules:
 - It still invents plausible but wrong architecture; lock massing with a
   reference or a V-Ray frame, never from text alone for a real project.
 
+Default for clips: **Seedance 2.0** (ByteDance, Feb 2026) for every
+generated walkthrough shot, animated hero frame, day-to-dusk repeat, car
+arrival, product close-up and previs film. It leads the image-to-video
+leaderboards, keeps geometry and materials from a locked first frame,
+takes up to 9 image, 3 video and 3 audio references addressed as @image1,
+@video1, @audio1, locks a last frame, and renders 4–15 s at 1080p or 2K
+(4K in "std" mode on hosts that expose it) with native audio.
+Use **Veo 3.1** only when the architect speaks on camera and lip-sync
+matters. Use **Seedance 2.5** when one beat must run longer than 15 s or
+an existing clip needs extending. Seedance 2.0 Mini is the fallback for
+bulk 720p drafts and animatics.
+
+Seedance 2.0 rules:
+- Every clip starts from a still: the V-Ray frame or the Nano Banana Pro
+  still as @image1 first frame. Fix any artefact in the still first; the
+  clip inherits it.
+- One camera instruction per clip, taken from the studio's shot vocabulary
+  (`references/cinematic-films.md` §3), with pacing words ("slow, eased
+  dolly in") rather than numbers. Two moves in one prompt fight.
+- Two or three sentences in this order: subject, action, camera,
+  setting and light, style, audio. The first twenty words lock the shot.
+- Shot length 4–6 s (8–12 s for aerial openers) so the edit keeps the
+  studio's 3–5 s rhythm; ask for 16:9, 1080p or 2K, high bitrate.
+- Day-to-dusk repeat: @image1 the day frame, @image2 the dusk frame as
+  the last frame, "lights come on, sky deepens, camera static".
+- Borrow motion, not looks: "camera movement of @video1" from a studio
+  film or an earlier approved clip; keep the look from the still.
+- Audio: hand it the score as @audio1 so the move lands on the beat, or
+  turn native audio off and cut to music in DaVinci. Never keep its
+  default orchestral bed.
+- No on-screen text: titles, feature overlays, RERA cards are edit work.
+- People at mid-distance only, never facing camera; a protagonist
+  close-up needs a Nano Banana Pro reference of the same person.
+
 ## 8. QA checklist before delivery
 
 - [ ] Every space has at least one morning, one evening and one night frame
@@ -230,6 +267,9 @@ Nano Banana Pro rules:
       life cue (steam, a drink, an open book, a fan, a person mid-distance).
 - [ ] Films: cold open on nature, arrival by car, dusk repeat of a daytime
       frame, night finale, credits with architect and RERA.
+- [ ] Generated clips: each starts from an approved still, one camera
+      move, no geometry drift between first and last frame, no baked-in
+      text, native audio off or scored to the film's track.
 - [ ] Shot names follow `SPACE_MOOD_NN`; deliverables listed with resolution.
 
 ## 9. Files in this skill
@@ -238,8 +278,8 @@ Nano Banana Pro rules:
 - `references/interiors.md` — room-by-room playbook, LightMix, staging,
   Indian interior vocabulary (new in v2).
 - `references/cinematic-films.md` — film modes, the arc every film follows,
-  shot vocabulary, music and sound, delivery specs (rebuilt in v2 from the
-  channel).
+  shot vocabulary, music and sound, delivery specs, Seedance 2.0 clip
+  recipes (rebuilt in v2 from the channel).
 - `references/films-catalogue.md` — 17 films analysed shot by shot, cross-film
   patterns, the 2018 to 2026 evolution, video ids (new in v2).
 - `references/vray-quality.md` — V-Ray 7 (2026) render settings, lighting,
@@ -248,5 +288,5 @@ Nano Banana Pro rules:
   briefing phrasebook (new in v2).
 - `references/sources.md` — channel and article catalogue, project list,
   verification caveats.
-- `assets/brief-template.md` — fill-in brief for stills, films and image-gen
-  prompts.
+- `assets/brief-template.md` — fill-in brief for stills, films, image-gen
+  and video-gen prompts.

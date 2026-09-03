@@ -20,6 +20,7 @@ Contents
 9. Edit, transitions and credits
 10. Delivery specs and render budget
 11. Storyboard template (residential, 1:40)
+12. Generated clips with Seedance 2.0 (2026)
 
 ---
 
@@ -223,3 +224,69 @@ SHOT ACT       CONTENT                                   MOVE            LENS DU
 28   Night     aerial, entry road lit, city grid           aerial pull     28   6s  NIGHT
 29   Credits   logo, developer, architect, RERA, IMPACT 3D -               -    8s  -
 ```
+
+## 12. Generated clips with Seedance 2.0 (2026)
+
+Use generated clips for previs and animatics, for a concept film before
+the 3ds Max scene exists, for social cuts from an approved stills pack,
+and for animating single hero frames. The final client film is still
+rendered; the generated version is what the client approves the edit on.
+
+Model: **Seedance 2.0** by default. Veo 3.1 only for an architect speaking
+on camera; Seedance 2.5 for a beat longer than 15 s or to extend a clip;
+Seedance 2.0 Mini for bulk 720p drafts. Settings per clip: 16:9, 1080p or
+2K, "std" mode, high bitrate, 4–6 s (8–12 s for the aerial opener),
+genre auto or drama, native audio off unless the score is attached.
+
+**Prompt shape** (two or three sentences, the first twenty words carry
+the shot): subject → action → one camera move → setting and light (name
+the scene state) → style → audio.
+
+```
+@image1 is the first frame. [Subject], [what moves]. Camera: [one move
+from §3, slow and eased]. [Scene state sentence]. Photorealistic
+architectural film, V-Ray 7 render look, 24 fps, natural colour, no text.
+Audio: [none | ambient only | follow @audio1].
+```
+
+**Inputs**
+- @image1: the V-Ray frame or Nano Banana Pro still, artefact-free, at
+  the film's aspect ratio. The clip keeps its materials, light and layout.
+- @image2 as last frame for the day-to-dusk repeat, a rack-focus reveal
+  or a lights-on timelapse.
+- @video1: a 3–5 s clip whose camera motion you want copied (a studio film
+  shot, or an approved earlier clip); write "camera movement of @video1".
+- @audio1: the score excerpt for that beat, so the move lands on the
+  downbeat.
+
+**Recipes for the studio's signature shots**
+
+| Shot | Prompt core | Inputs | Dur |
+|---|---|---|---|
+| Cold open, macro palm frond | "Macro palm frond, sun starburst through the fronds, leaves sway gently. Camera: static with slight breathing. MORNING, soft haze." | @image1 | 4 s |
+| Tilt-up through trees | "Villa facade seen past foliage in the lower corners. Camera: slow tilt up from the lawn to the roofline, eased." | @image1 | 4 s |
+| Aerial follow of the sedan | "A dark grey sedan rounds the curve of a palm-lined road toward the entrance. Camera: aerial track following the car, 30 m, 30 degrees down. GOLDEN." | @image1, @video1 optional | 6–8 s |
+| Rear track down the drive | "Camera: smooth rear track behind the car at walking pace, trees pass on both sides." | @image1 | 4 s |
+| Top-down through the pendant | "Dining table seen through a ring pendant from above; a candle flickers. Camera: very slow push down." | @image1 | 3 s |
+| Through the jaali | "Living room seen through a jaali screen; patterned light drifts across the floor. Camera: slow lateral track." | @image1 | 4 s |
+| Balcony looking in | "Warm interior glow through sliding glass, sheer curtain moves in a breeze. Camera: static. BLUE." | @image1 | 4 s |
+| Water-level pool | "Camera at water level looking across the pool to cabanas; ripples catch the sun. Camera: slow dolly forward just above the water." | @image1 | 5 s |
+| Day-to-dusk repeat | "Same plaza; sky deepens from day to blue hour, facade and path lights come on. Camera: static." | @image1 day, @image2 dusk as last frame | 5 s |
+| Product close-up | "Billiard rack on green baize at shallow depth; a hand racks the last ball. Camera: static, slow rack focus." | @image1 | 3 s |
+| Night aerial | "Township at night, lit entry road, city grid beyond. Camera: slow aerial pull back and rise. NIGHT." | @image1 | 6–8 s |
+
+**Assembly**: generate every shot from the storyboard in §11 as its own
+clip, review at 720p in Mini, regenerate approved shots at 1080p or 2K,
+then cut to the score in DaVinci Resolve with the studio's straight cuts.
+Title, feature overlays and credit cards are added in the edit, never
+generated. Grade with the same LUT as the stills pack.
+
+**What it gets wrong, and the fix**
+- Geometry drifts on long or fast moves: keep clips under 6 s, one slow
+  move, and lock the last frame when the end composition matters.
+- Extra doors, windows or furniture appear: re-run with the still as a
+  stronger constraint ("nothing changes except the camera and the light").
+- Invented signage or warped text: remove text from the still, add
+  overlays in the edit.
+- A random orchestral score: audio off, or attach @audio1.
+- People morph: keep them mid-distance and small, or cut around them.
