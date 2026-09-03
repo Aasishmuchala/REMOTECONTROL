@@ -314,6 +314,7 @@ not keyword soup:
    text, no watermark, no cartoon."
 
 With reference images, compose instead of describing: "same room layout
-as @image1, materials from @image2, lighting mood of @image3". Generate
-the still, upscale, then animate with a minimal motion prompt ("slow
-push-in, curtain moving in a breeze") if a clip is needed.
+as @image1, materials from @image2, lighting mood of @image3". Generate the
+still, upscale, then animate it with Seedance 2.0 (the still as @image1
+first frame, one slow move, "curtain moving in a breeze", 4–5 s) using the
+recipes in `cinematic-films.md` §12 if a clip is needed.

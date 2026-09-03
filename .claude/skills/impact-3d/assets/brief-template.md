@@ -63,6 +63,19 @@ References: "layout of @image1, materials of @image2, light of @image3".
 - Sound design layers:
 - Deliverables: 4K H.264, ProRes master, vertical cut, stills pack
 
+Generated clips (previs, animatic, or a film with no 3ds Max scene):
+Model: Seedance 2.0 (default) | Veo 3.1 (architect on camera, lip-sync) |
+Seedance 2.5 (beat over 15 s, extend a clip) | Seedance 2.0 Mini (drafts)
+Output: 16:9, 1080p or 2K std, high bitrate, 4–6 s per shot, audio off
+unless the score is attached as @audio1
+Per shot (see references/cinematic-films.md §12):
+"@image1 is the first frame. [Subject], [what moves]. Camera: [one move,
+slow and eased]. [Scene state sentence]. Photorealistic architectural
+film, V-Ray 7 render look, 24 fps, natural colour, no text. Audio: [none
+| ambient only | follow @audio1]."
+Inputs: @image1 still | @image2 last frame (day-to-dusk) | @video1 camera
+reference | @audio1 score excerpt
+
 ## 7. Post recipe
 - LUT and opacity:
 - Bloom / glare / CA / vignette:

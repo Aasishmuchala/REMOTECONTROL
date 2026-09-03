@@ -270,4 +270,6 @@ order as sentences:
 
 Compose with references when available ("massing of @image1, material
 palette of @image2, sky of @image3"), generate the still, upscale, then
-animate minimally if a clip is needed.
+animate it with Seedance 2.0 (the still as @image1 first frame, one slow
+move such as a tilt-up through trees or an aerial pull, 4–6 s) using the
+recipes in `cinematic-films.md` §12 if a clip is needed.

@@ -105,3 +105,11 @@ GrowFX, Anima, After Effects, DaVinci Resolve.
   with `yt-dlp --flat-playlist -J` and `--write-auto-sub`) into
   `references/videos/` and update the playbooks with anything the videos
   contradict.
+
+## Generation-model references (2026)
+Model choices in SKILL.md §7 and `cinematic-films.md` §12 come from public
+2026 material, not from the studio: ByteDance's Seedance 2.0 release notes
+and prompt guide (six-block prompt, @image/@video/@audio references, first
+and last frame lock, 4–15 s, native audio), the Artificial Analysis
+image-to-video leaderboard as of mid-2026, and hosted API parameter sheets
+(resolution, mode, bitrate, genre). Re-check them when a newer model ships.
