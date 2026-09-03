@@ -59,7 +59,8 @@ pages). `references/sources.md` lists both and what could not be verified.
 | Walkthrough / property film / animation | `references/cinematic-films.md` | storyboard + shot durations + music/sound brief + edit plan |
 | Both exterior and interior of one project | all three | one project bible; keep one time-of-day arc across shots |
 | Image-gen prompt only (concept image, relight, image-to-image polish) | §7 below, then §10/§11 of the relevant reference | model choice + prompt block from `assets/brief-template.md` §5 |
-| Video-gen prompt only (animate a frame, walkthrough clip, day-to-dusk clip, previs film) | §7 below, then `references/cinematic-films.md` §12 | per-shot clip prompts from `assets/brief-template.md` §6 |
+| Video-gen prompt only (animate a frame, walkthrough clip, day-to-dusk clip) | §7 below, then `references/cinematic-films.md` §12 | per-shot clip prompts from `assets/brief-template.md` §6 |
+| "Make an Impact 3D style video" with Seedance 2.0 (whole film, previs, no 3ds Max scene) | `references/seedance-films.md` | project bible, beat list, film blueprint and a Seedance prompt per clip |
 | Brief for MaxDirector / MaxGaffer / MatForge / ShotRunner | §6 below + `assets/brief-template.md` | filled template |
 | "What does an Impact 3D film look like?", reference a specific project, match a specific shot | `references/films-catalogue.md` | the pattern list or the film entry, with video id |
 | V-Ray render settings, VRayMtl recipes, VFB grade, texture standards, Chaos Scatter, splats, parallax interiors | `references/vray-quality.md` | settings block + material table rows + grade preset |
@@ -218,7 +219,11 @@ takes up to 9 image, 3 video and 3 audio references addressed as @image1,
 Use **Veo 3.1** only when the architect speaks on camera and lip-sync
 matters. Use **Seedance 2.5** when one beat must run longer than 15 s or
 an existing clip needs extending. Seedance 2.0 Mini is the fallback for
-bulk 720p drafts and animatics.
+bulk 720p drafts and animatics. For a whole film rather than a clip, go
+to `references/seedance-films.md`: the project bible that keeps thirty
+clips on the same building, the studio's creative DNA as prompt language,
+a beat bank, blueprints per film mode and two films written out clip by
+clip.
 
 Seedance 2.0 rules:
 - Every clip starts from a still: the V-Ray frame or the Nano Banana Pro
@@ -282,6 +287,10 @@ Seedance 2.0 rules:
   recipes (rebuilt in v2 from the channel).
 - `references/films-catalogue.md` — 17 films analysed shot by shot, cross-film
   patterns, the 2018 to 2026 evolution, video ids (new in v2).
+- `references/seedance-films.md` — Impact 3D style films made with
+  Seedance 2.0: project bible, creative DNA as prompt language, beat bank,
+  blueprints per mode, two fully written films, music, transitions,
+  vertical cut, creative rules (new in v2).
 - `references/vray-quality.md` — V-Ray 7 (2026) render settings, lighting,
   VRayMtl rules and MatForge-aligned material recipes, texture standards,
   vegetation and context, VFB2 grade, render elements, quality gates,

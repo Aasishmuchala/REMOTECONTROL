@@ -230,7 +230,9 @@ SHOT ACT       CONTENT                                   MOVE            LENS DU
 Use generated clips for previs and animatics, for a concept film before
 the 3ds Max scene exists, for social cuts from an approved stills pack,
 and for animating single hero frames. The final client film is still
-rendered; the generated version is what the client approves the edit on.
+rendered; the generated version is what the client approves the edit on. This
+section is the mechanics of one clip; `seedance-films.md` is the film:
+bible, beats, blueprints and written-out prompts.
 
 Model: **Seedance 2.0** by default. Veo 3.1 only for an architect speaking
 on camera; Seedance 2.5 for a beat longer than 15 s or to extend a clip;
