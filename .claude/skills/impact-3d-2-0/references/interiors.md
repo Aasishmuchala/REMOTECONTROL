@@ -1,4 +1,4 @@
-# Interiors — the IMPACT 3D playbook (new in v2)
+# Interiors — the IMPACT 3D playbook (2.0)
 
 Impact 3D interiors read as photographed rooms in a real Indian home or
 hospitality space: sunlight with direction, materials you can feel, a view

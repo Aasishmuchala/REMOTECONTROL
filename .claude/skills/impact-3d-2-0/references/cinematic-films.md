@@ -1,4 +1,4 @@
-# Cinematic walkthrough films — the IMPACT 3D playbook (v2, rebuilt from the channel)
+# Cinematic walkthrough films — the IMPACT 3D playbook (2.0, rebuilt from the channel)
 
 Built from scene-by-scene analyses of 17 IMPACT 3D films (see
 `films-catalogue.md`) plus Manji Vagjiyani's published tenets: camera work
