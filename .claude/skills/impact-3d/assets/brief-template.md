@@ -75,6 +75,9 @@ film, V-Ray 7 render look, 24 fps, natural colour, no text. Audio: [none
 | ambient only | follow @audio1]."
 Inputs: @image1 still | @image2 last frame (day-to-dusk) | @video1 camera
 reference | @audio1 score excerpt
+Whole film: build the nine-slot bible and pick the mode blueprint in
+references/seedance-films.md §1 and §4, then write one prompt per clip
+following the worked films in §5–§6.
 
 ## 7. Post recipe
 - LUT and opacity:
